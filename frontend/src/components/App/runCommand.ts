@@ -25,7 +25,7 @@
  * ```
  */
 export function runCommand(
-  command: 'minikube' | 'az',
+  command: 'minikube' | 'az' | 'electron-node',
   args: string[],
   options: {}
 ): {

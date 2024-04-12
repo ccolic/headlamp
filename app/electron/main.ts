@@ -1,5 +1,12 @@
 import 'regenerator-runtime/runtime';
-import { ChildProcessWithoutNullStreams, execSync, spawn } from 'child_process';
+import {
+  ChildProcess,
+  ChildProcessWithoutNullStreams,
+  execSync,
+  fork,
+  spawn,
+  StdioOptions,
+} from 'child_process';
 import { randomBytes } from 'crypto';
 import dotenv from 'dotenv';
 import { app, BrowserWindow, dialog, ipcMain, Menu, MenuItem, screen, shell } from 'electron';
@@ -661,7 +668,11 @@ function startElecron() {
        * Options to pass to the command.
        * See https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options
        */
-      options: {};
+      options: {
+        env?: { [key: string]: any };
+        stdio?: StdioOptions;
+        silent?: boolean;
+      };
     }
 
     /**
@@ -671,12 +682,15 @@ function startElecron() {
      * 'command-stderr', and 'command-exit' events back to the renderer
      * process with the command's output and exit code.
      *
+     * In case of 'electron-node' command, it uses fork instead of spawn
+     * to use the same node process as the main process.
+     *
      * @param event - The event object.
      * @param eventData - The data sent from the renderer process.
      */
     function handleRunCommand(event: IpcMainEvent, eventData: CommandData): void {
       // Only allow "minikube", and "az" commands
-      const validCommands = ['minikube', 'az'];
+      const validCommands = ['minikube', 'az', 'electron-node'];
       if (!validCommands.includes(eventData.command)) {
         console.error(
           `Invalid command: ${eventData.command}, only valid commands are: ${JSON.stringify(
@@ -686,23 +700,55 @@ function startElecron() {
         return;
       }
 
-      const child: ChildProcessWithoutNullStreams = spawn(
-        eventData.command,
-        eventData.args,
-        eventData.options
-      );
+      if (!eventData.options) {
+        eventData.options = {};
+      }
 
-      child.stdout.on('data', (data: string | Buffer) => {
-        event.sender.send('command-stdout', eventData.id, data.toString());
-      });
+      // if command is electron-node use fork
+      if (eventData.command === 'electron-node') {
+        if (!eventData.options?.env) {
+          eventData.options.env = {};
+        }
+        eventData.options.env['ELECTRON_RUN_AS_NODE'] = '1';
+        eventData.options.silent = true;
+        const child: ChildProcess = fork(
+          eventData.args[0],
+          eventData.args.slice(1),
+          eventData.options
+        );
 
-      child.stderr.on('data', (data: string | Buffer) => {
-        event.sender.send('command-stderr', eventData.id, data.toString());
-      });
+        if (child.stdout !== null) {
+          child.stdout?.on('data', (data: string | Buffer) => {
+            event.sender.send('command-stdout', eventData.id, data.toString());
+          });
+        }
+        if (child.stderr !== null) {
+          child.stderr.on('data', (data: string | Buffer) => {
+            event.sender.send('command-stderr', eventData.id, data.toString());
+          });
+        }
+        child.on('exit', (code: number | null) => {
+          event.sender.send('command-exit', eventData.id, code);
+        });
+      } else {
+        const child = spawn(eventData.command, eventData.args, eventData.options);
 
-      child.on('exit', (code: number | null) => {
-        event.sender.send('command-exit', eventData.id, code);
-      });
+        if (child.stdout !== null) {
+          child.stdout.on('data', (data: string | Buffer) => {
+            event.sender.send('command-stdout', eventData.id, data.toString());
+          });
+        }
+
+        if (child.stderr !== null) {
+          child.stderr.on('data', (data: string | Buffer) => {
+            event.sender.send('command-stderr', eventData.id, data.toString());
+          });
+        }
+
+        child.on('exit', (code: number | null) => {
+          event.sender.send('command-exit', eventData.id, code);
+        });
+      }
     }
 
     ipcMain.on('run-command', handleRunCommand);
