@@ -6,6 +6,7 @@ import { app, BrowserWindow, dialog, ipcMain, Menu, MenuItem, screen, shell } fr
 import { IpcMainEvent, MenuItemConstructorOptions } from 'electron/main';
 import log from 'electron-log';
 import find_process from 'find-process';
+import fixPath from 'fix-path';
 import fs from 'fs';
 import open from 'open';
 import path from 'path';
@@ -15,6 +16,13 @@ import i18n from './i18next.config';
 import windowSize from './windowSize';
 
 dotenv.config({ path: path.join(process.resourcesPath, '.env') });
+
+if (process.platform === 'darwin') {
+  // On at least MacOS, GUI apps do not take on the shell paths.
+  // However they are needed for kubectl auth plugins,
+  // and perhaps other binaries like minikube
+  fixPath();
+}
 
 const args = yargs
   .command('$0 [kubeconfig]', '', yargs => {
