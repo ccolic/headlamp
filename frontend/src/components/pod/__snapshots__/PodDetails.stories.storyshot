@@ -2963,7 +2963,7 @@ exports[`Storyshots Pod/PodDetailsView Liveness Failed 1`] = `
                         class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-175wz9v-MuiGrid-root"
                       >
                         <p
-                          class="MuiTypography-root MuiTypography-body1 makeStyles-metadataValueLabel css-1ezega9-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body1 css-141xs6k-MuiTypography-root"
                         >
                           /server
                         </p>
@@ -2986,7 +2986,7 @@ exports[`Storyshots Pod/PodDetailsView Liveness Failed 1`] = `
                       class="MuiBox-root css-2rlxtj"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body1 makeStyles-metadataValueLabel css-1os2m0i-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-165txdq-MuiTypography-root"
                       >
                         http-get, path: /healthz, port: 8080,
     scheme: HTTP
@@ -2996,7 +2996,7 @@ exports[`Storyshots Pod/PodDetailsView Liveness Failed 1`] = `
                       class="MuiBox-root css-2rlxtj"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body1 makeStyles-metadataValueLabel css-1os2m0i-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-165txdq-MuiTypography-root"
                       >
                         success = 1
                       </p>
@@ -3005,7 +3005,7 @@ exports[`Storyshots Pod/PodDetailsView Liveness Failed 1`] = `
                       class="MuiBox-root css-2rlxtj"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body1 makeStyles-metadataValueLabel css-1os2m0i-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-165txdq-MuiTypography-root"
                       >
                         failure = 3
                       </p>
@@ -3014,7 +3014,7 @@ exports[`Storyshots Pod/PodDetailsView Liveness Failed 1`] = `
                       class="MuiBox-root css-2rlxtj"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body1 makeStyles-metadataValueLabel css-1os2m0i-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-165txdq-MuiTypography-root"
                       >
                         delay = 3s
                       </p>
@@ -3023,7 +3023,7 @@ exports[`Storyshots Pod/PodDetailsView Liveness Failed 1`] = `
                       class="MuiBox-root css-2rlxtj"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body1 makeStyles-metadataValueLabel css-1os2m0i-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-165txdq-MuiTypography-root"
                       >
                         timeout = 1s
                       </p>
@@ -3032,7 +3032,7 @@ exports[`Storyshots Pod/PodDetailsView Liveness Failed 1`] = `
                       class="MuiBox-root css-2rlxtj"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body1 makeStyles-metadataValueLabel css-1os2m0i-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-165txdq-MuiTypography-root"
                       >
                         period = 3s
                       </p>
