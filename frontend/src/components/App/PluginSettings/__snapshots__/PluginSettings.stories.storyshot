@@ -52,10 +52,10 @@ exports[`Storyshots Settings/PluginSettings Default Save Enable 1`] = `
       class="MuiBox-root css-1txv3mw"
     >
       <div
-        class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+        class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
       >
         <table
-          class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+          class="MuiTable-root css-9gafzc-MuiTable-root"
         >
           <thead
             class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -64,7 +64,7 @@ exports[`Storyshots Settings/PluginSettings Default Save Enable 1`] = `
               class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
             >
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Name
@@ -81,7 +81,7 @@ exports[`Storyshots Settings/PluginSettings Default Save Enable 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Description
@@ -98,7 +98,7 @@ exports[`Storyshots Settings/PluginSettings Default Save Enable 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Origin
@@ -115,7 +115,7 @@ exports[`Storyshots Settings/PluginSettings Default Save Enable 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Status
@@ -459,10 +459,10 @@ exports[`Storyshots Settings/PluginSettings Empty Homepage Items 1`] = `
       class="MuiBox-root css-1txv3mw"
     >
       <div
-        class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+        class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
       >
         <table
-          class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+          class="MuiTable-root css-9gafzc-MuiTable-root"
         >
           <thead
             class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -471,7 +471,7 @@ exports[`Storyshots Settings/PluginSettings Empty Homepage Items 1`] = `
               class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
             >
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Name
@@ -488,7 +488,7 @@ exports[`Storyshots Settings/PluginSettings Empty Homepage Items 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Description
@@ -505,7 +505,7 @@ exports[`Storyshots Settings/PluginSettings Empty Homepage Items 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Origin
@@ -522,7 +522,7 @@ exports[`Storyshots Settings/PluginSettings Empty Homepage Items 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Status
@@ -783,10 +783,10 @@ exports[`Storyshots Settings/PluginSettings Few Items 1`] = `
       class="MuiBox-root css-1txv3mw"
     >
       <div
-        class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+        class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
       >
         <table
-          class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+          class="MuiTable-root css-9gafzc-MuiTable-root"
         >
           <thead
             class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -795,7 +795,7 @@ exports[`Storyshots Settings/PluginSettings Few Items 1`] = `
               class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
             >
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Name
@@ -812,7 +812,7 @@ exports[`Storyshots Settings/PluginSettings Few Items 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Description
@@ -829,7 +829,7 @@ exports[`Storyshots Settings/PluginSettings Few Items 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Origin
@@ -846,7 +846,7 @@ exports[`Storyshots Settings/PluginSettings Few Items 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Status
@@ -1107,10 +1107,10 @@ exports[`Storyshots Settings/PluginSettings Many Items 1`] = `
       class="MuiBox-root css-1txv3mw"
     >
       <div
-        class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+        class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
       >
         <table
-          class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+          class="MuiTable-root css-9gafzc-MuiTable-root"
         >
           <thead
             class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -1119,7 +1119,7 @@ exports[`Storyshots Settings/PluginSettings Many Items 1`] = `
               class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
             >
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Name
@@ -1136,7 +1136,7 @@ exports[`Storyshots Settings/PluginSettings Many Items 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Description
@@ -1153,7 +1153,7 @@ exports[`Storyshots Settings/PluginSettings Many Items 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Origin
@@ -1170,7 +1170,7 @@ exports[`Storyshots Settings/PluginSettings Many Items 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Status
@@ -1791,10 +1791,10 @@ exports[`Storyshots Settings/PluginSettings More Items 1`] = `
       class="MuiBox-root css-1txv3mw"
     >
       <div
-        class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+        class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
       >
         <table
-          class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+          class="MuiTable-root css-9gafzc-MuiTable-root"
         >
           <thead
             class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -1803,7 +1803,7 @@ exports[`Storyshots Settings/PluginSettings More Items 1`] = `
               class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
             >
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Name
@@ -1820,7 +1820,7 @@ exports[`Storyshots Settings/PluginSettings More Items 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Description
@@ -1837,7 +1837,7 @@ exports[`Storyshots Settings/PluginSettings More Items 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Origin
@@ -1854,7 +1854,7 @@ exports[`Storyshots Settings/PluginSettings More Items 1`] = `
                 </button>
               </th>
               <th
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell makeStyles-sortCell css-1ciaiyl-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-ojhczg-MuiTableCell-root"
                 scope="col"
               >
                 Status

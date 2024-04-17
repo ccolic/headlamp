@@ -3,10 +3,10 @@
 exports[`Storyshots SimpleTable Datum 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
   >
     <table
-      class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+      class="MuiTable-root css-9gafzc-MuiTable-root"
     >
       <thead
         class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -15,25 +15,25 @@ exports[`Storyshots SimpleTable Datum 1`] = `
           class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Name
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Status
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Age
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Long Field Name
@@ -124,10 +124,10 @@ exports[`Storyshots SimpleTable Datum 1`] = `
 exports[`Storyshots SimpleTable Getter 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
   >
     <table
-      class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+      class="MuiTable-root css-vd1o8p-MuiTable-root"
     >
       <thead
         class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -136,31 +136,31 @@ exports[`Storyshots SimpleTable Getter 1`] = `
           class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Name
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Status
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Age
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Long Field Name
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Number
@@ -420,10 +420,10 @@ exports[`Storyshots SimpleTable Label Search 1`] = `
     </div>
   </div>
   <div
-    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
   >
     <table
-      class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+      class="MuiTable-root css-9gafzc-MuiTable-root"
     >
       <thead
         class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -432,25 +432,25 @@ exports[`Storyshots SimpleTable Label Search 1`] = `
           class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Name
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Namespace
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             UID
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Labels
@@ -671,10 +671,10 @@ exports[`Storyshots SimpleTable Name Search 1`] = `
     </div>
   </div>
   <div
-    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
   >
     <table
-      class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+      class="MuiTable-root css-9gafzc-MuiTable-root"
     >
       <thead
         class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -683,25 +683,25 @@ exports[`Storyshots SimpleTable Name Search 1`] = `
           class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Name
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Namespace
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             UID
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Labels
@@ -898,10 +898,10 @@ exports[`Storyshots SimpleTable Namespace Search 1`] = `
     </div>
   </div>
   <div
-    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
   >
     <table
-      class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+      class="MuiTable-root css-9gafzc-MuiTable-root"
     >
       <thead
         class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -910,25 +910,25 @@ exports[`Storyshots SimpleTable Namespace Search 1`] = `
           class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Name
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Namespace
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             UID
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Labels
@@ -1159,10 +1159,10 @@ exports[`Storyshots SimpleTable Namespace Select 1`] = `
     </div>
   </div>
   <div
-    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
   >
     <table
-      class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+      class="MuiTable-root css-9gafzc-MuiTable-root"
     >
       <thead
         class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -1171,25 +1171,25 @@ exports[`Storyshots SimpleTable Namespace Select 1`] = `
           class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Name
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Namespace
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             UID
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Labels
@@ -1408,10 +1408,10 @@ exports[`Storyshots SimpleTable Not Found Message 1`] = `
     </div>
   </div>
   <div
-    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
   >
     <table
-      class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+      class="MuiTable-root css-9gafzc-MuiTable-root"
     >
       <thead
         class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -1420,25 +1420,25 @@ exports[`Storyshots SimpleTable Not Found Message 1`] = `
           class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Name
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Namespace
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             UID
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Labels
@@ -1629,10 +1629,10 @@ exports[`Storyshots SimpleTable Number Search 1`] = `
     </div>
   </div>
   <div
-    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
   >
     <table
-      class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+      class="MuiTable-root css-1ndbor9-MuiTable-root"
     >
       <thead
         class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -1641,19 +1641,19 @@ exports[`Storyshots SimpleTable Number Search 1`] = `
           class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Name
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Namespace
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Number
@@ -1708,10 +1708,10 @@ exports[`Storyshots SimpleTable Reflect In URL 1`] = `
       ?p=2
     </p>
     <div
-      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
     >
       <table
-        class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+        class="MuiTable-root css-1ndbor9-MuiTable-root"
       >
         <thead
           class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -1720,19 +1720,19 @@ exports[`Storyshots SimpleTable Reflect In URL 1`] = `
             class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
           >
             <th
-              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
               scope="col"
             >
               Name
             </th>
             <th
-              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
               scope="col"
             >
               Namespace
             </th>
             <th
-              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
               scope="col"
             >
               Number
@@ -1864,10 +1864,10 @@ exports[`Storyshots SimpleTable Reflect In URL With Prefix 1`] = `
       ?p=2
     </p>
     <div
-      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
     >
       <table
-        class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+        class="MuiTable-root css-1ndbor9-MuiTable-root"
       >
         <thead
           class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -1876,19 +1876,19 @@ exports[`Storyshots SimpleTable Reflect In URL With Prefix 1`] = `
             class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
           >
             <th
-              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
               scope="col"
             >
               Name
             </th>
             <th
-              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
               scope="col"
             >
               Namespace
             </th>
             <th
-              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
               scope="col"
             >
               Number
@@ -2147,10 +2147,10 @@ exports[`Storyshots SimpleTable UID Search 1`] = `
     </div>
   </div>
   <div
-    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root makeStyles-tableContainer css-h2cton-MuiPaper-root-MuiTableContainer-root"
+    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-1msda30-MuiPaper-root-MuiTableContainer-root"
   >
     <table
-      class="MuiTable-root makeStyles-table makeStyles-table css-vzt8dn-MuiTable-root"
+      class="MuiTable-root css-9gafzc-MuiTable-root"
     >
       <thead
         class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
@@ -2159,25 +2159,25 @@ exports[`Storyshots SimpleTable UID Search 1`] = `
           class="MuiTableRow-root MuiTableRow-head css-73w7uv-MuiTableRow-root"
         >
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Name
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Namespace
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             UID
           </th>
           <th
-            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall makeStyles-headerCell css-1ciaiyl-MuiTableCell-root"
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t33dlg-MuiTableCell-root"
             scope="col"
           >
             Labels
