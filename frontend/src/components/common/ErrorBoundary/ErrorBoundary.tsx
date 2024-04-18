@@ -44,6 +44,7 @@ export default class ErrorBoundary extends Component<ErrorBoundaryProps, State> 
   render() {
     const { error } = this.state;
     if (error) {
+      console.error(error);
       store.dispatch(eventAction({ type: HeadlampEventType.ERROR_BOUNDARY, data: error }));
     }
     if (!error) {
@@ -52,6 +53,7 @@ export default class ErrorBoundary extends Component<ErrorBoundaryProps, State> 
     if (isValidElement(this.props.fallback)) {
       return this.props.fallback;
     }
-    return this.props.fallback ? Children.toArray([<this.props.fallback error={error} />]) : null;
+    const FallbackComponent = this.props.fallback as unknown as ComponentType<{ error: Error }>;
+    return FallbackComponent ? Children.toArray([<FallbackComponent error={error} />]) : null;
   }
 }

@@ -35,6 +35,14 @@ export function NetworkPolicyList() {
           label: t('Pod Selector'),
           getter: networkpolicy => {
             const podSelector = networkpolicy.jsonData.spec.podSelector;
+            return podSelector.matchLabels
+              ? Object.keys(podSelector.matchLabels)
+                  .map(key => `${key}=${podSelector.matchLabels[key]}`)
+                  .join(', ')
+              : null;
+          },
+          render: networkpolicy => {
+            const podSelector = networkpolicy.jsonData.spec.podSelector;
             return podSelector.matchLabels ? (
               <LabelListItem
                 labels={Object.keys(podSelector.matchLabels).map(

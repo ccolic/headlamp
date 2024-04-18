@@ -18,7 +18,8 @@ export default function VolumeClaimList() {
         {
           id: 'className',
           label: t('Class Name'),
-          getter: volumeClaim => {
+          getter: volumeClaim => volumeClaim.spec.storageClassName,
+          render: volumeClaim => {
             const name = volumeClaim.spec.storageClassName;
             if (!name) {
               return '';
@@ -29,32 +30,29 @@ export default function VolumeClaimList() {
               </Link>
             );
           },
-          sort: (v1, v2) => v1.spec.storageClassName.localeCompare(v2.spec.storageClassName),
         },
         {
           id: 'capacity',
           label: t('Capacity'),
           getter: volumeClaim => volumeClaim.status.capacity?.storage,
-          sort: true,
           gridTemplate: 0.8,
         },
         {
           id: 'accessModes',
           label: t('Access Modes'),
-          getter: volumeClaim => <LabelListItem labels={volumeClaim.spec.accessModes || []} />,
-          sort: (v1, v2) =>
-            v1.spec.accessModes.join('').localeCompare(v2.spec.accessModes.join('')),
+          getter: volumeClaim => volumeClaim.spec.accessModes.join(', '),
+          render: volumeClaim => <LabelListItem labels={volumeClaim.spec.accessModes || []} />,
         },
         {
           id: 'volumeMode',
           label: t('Volume Mode'),
           getter: volumeClaim => volumeClaim.spec.volumeMode,
-          sort: true,
         },
         {
           id: 'volume',
           label: t('Volume'),
-          getter: volumeClaim => {
+          getter: volumeClaim => volumeClaim.spec.volumeName,
+          render: volumeClaim => {
             const name = volumeClaim.spec.volumeName;
             if (!name) {
               return '';
@@ -69,9 +67,9 @@ export default function VolumeClaimList() {
         {
           id: 'status',
           label: t('translation|Status'),
-          getter: volume => makePVCStatusLabel(volume),
+          getter: volume => volume.status.phase,
+          render: volume => makePVCStatusLabel(volume),
           gridTemplate: 0.3,
-          sort: true,
         },
         'age',
       ]}

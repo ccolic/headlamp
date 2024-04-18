@@ -18,16 +18,17 @@ export default function IngressClassList() {
           id: 'default',
           label: '',
           gridTemplate: 0.1,
-          getter: (resource: IngressClass) =>
+          getter: resource => (resource?.isDefault ? t('Default Ingress Class') : null),
+          render: (resource: IngressClass) =>
             resource && resource.isDefault ? <DefaultLabel /> : null,
-          sort: false,
+          disableSorting: true,
+          disableFiltering: true,
         },
         'name',
         {
           id: 'controller',
           label: t('Controller'),
           getter: (ingressClass: IngressClass) => ingressClass.spec?.controller,
-          sort: true,
         },
         'age',
       ]}

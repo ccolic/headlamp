@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import Node from '../../lib/k8s/node';
+import { getResourceMetrics } from '../../lib/util';
 import { HoverInfoLabel } from '../common';
 import ResourceListView from '../common/Resource/ResourceListView';
 import { UsageBarChart } from './Charts';
@@ -27,7 +28,11 @@ export default function NodeList() {
           cellProps: {
             sx: { width: '20%' },
           },
-          getter: node => (
+          getter: node => {
+            const [used] = getResourceMetrics(node, nodeMetrics || [], 'cpu');
+            return used;
+          },
+          render: node => (
             <UsageBarChart
               node={node}
               nodeMetrics={nodeMetrics}
@@ -42,7 +47,11 @@ export default function NodeList() {
           cellProps: {
             sx: { width: '20%' },
           },
-          getter: node => (
+          getter: node => {
+            const [used] = getResourceMetrics(node, nodeMetrics || [], 'memory');
+            return used;
+          },
+          render: node => (
             <UsageBarChart
               node={node}
               nodeMetrics={nodeMetrics}
@@ -55,12 +64,20 @@ export default function NodeList() {
           id: 'ready',
           label: t('translation|Ready'),
           gridTemplate: 'minmax(100px, .3fr)',
-          getter: node => <NodeReadyLabel node={node} />,
+          getter: node => {
+            const isReady = !!node.status.conditions.find(
+              condition => condition.type === 'Ready' && condition.status === 'True'
+            );
+            return isReady ? t('translation|Yes') : t('translation|No');
+          },
+          render: node => <NodeReadyLabel node={node} />,
         },
         {
           id: 'taints',
           label: t('translation|Taints'),
-          getter: (item: Node) => <NodeTaintsLabel node={item} />,
+          getter: node =>
+            node.spec?.taints?.map(taint => `${taint.key}:${taint.effect}`)?.join(', '),
+          render: (item: Node) => <NodeTaintsLabel node={item} />,
         },
         {
           id: 'roles',
@@ -93,7 +110,8 @@ export default function NodeList() {
           id: 'software',
           label: t('translation|Software'),
           gridTemplate: 'minmax(200px, 1.5fr)',
-          getter: node => {
+          getter: node => node.status.nodeInfo.operatingSystem,
+          render: node => {
             let osIcon = 'mdi:desktop-classic';
             if (node.status.nodeInfo.operatingSystem === 'linux') {
               osIcon = 'mdi:linux';

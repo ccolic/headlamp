@@ -90,7 +90,7 @@ export function JobsListRenderer(props: JobsListRendererProps) {
       headerProps={{
         noNamespaceFilter,
       }}
-      hideColumns={hideColumns}
+      disabledColumns={hideColumns}
       errorMessage={error}
       columns={[
         'name',
@@ -99,12 +99,15 @@ export function JobsListRenderer(props: JobsListRendererProps) {
           id: 'completions',
           label: t('Completions'),
           getter: job => getCompletions(job),
-          sort: sortByCompletions,
+          sortFn: sortByCompletions,
         },
         {
           id: 'conditions',
           label: t('translation|Conditions'),
-          getter: job => makePodStatusLabel(job),
+          getter: job =>
+            job.status?.conditions?.find(({ status }: { status: string }) => status === 'True') ??
+            null,
+          render: job => makePodStatusLabel(job),
         },
         {
           id: 'duration',
@@ -119,12 +122,16 @@ export function JobsListRenderer(props: JobsListRendererProps) {
             return '-';
           },
           gridTemplate: 0.6,
-          sort: true,
         },
         {
           id: 'containers',
           label: t('Containers'),
-          getter: job => {
+          getter: job =>
+            job
+              .getContainers()
+              .map(c => c.name)
+              .join(''),
+          render: job => {
             const containerNames = job.getContainers().map((c: KubeContainer) => c.name);
             const containerTooltip = containerNames.join('\n');
             const containerText = containerNames.join(', ');
@@ -138,7 +145,12 @@ export function JobsListRenderer(props: JobsListRendererProps) {
         {
           id: 'images',
           label: t('Images'),
-          getter: job => {
+          getter: job =>
+            job
+              .getContainers()
+              .map(c => c.image)
+              .join(''),
+          render: job => {
             const containerImages = job.getContainers().map((c: KubeContainer) => c.image);
             const containerTooltip = containerImages.join('\n');
             const containerText = containerImages.join(', ');

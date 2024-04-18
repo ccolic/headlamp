@@ -1,6 +1,5 @@
 import cronstrue from 'cronstrue/i18n';
 import { useTranslation } from 'react-i18next';
-import { KubeContainer } from '../../lib/k8s/cluster';
 import CronJob from '../../lib/k8s/cronJob';
 import { DateLabel, HoverInfoLabel, LightTooltip } from '../common';
 import ResourceListView from '../common/Resource/ResourceListView';
@@ -42,37 +41,42 @@ export default function CronJobList() {
         {
           id: 'schedule',
           label: t('Schedule'),
-          getter: cronJob => getSchedule(cronJob, i18n.language),
+          getter: cronJob => cronJob.spec.schedule,
+          render: cronJob => getSchedule(cronJob, i18n.language),
         },
         {
           id: 'suspend',
           label: t('translation|Suspend'),
           getter: cronJob => cronJob.spec.suspend.toString(),
-          sort: true,
           gridTemplate: 0.6,
         },
         {
           id: 'active',
           label: t('translation|Active'),
           getter: cronJob => cronJob.status?.active?.length || 0,
-          sort: true,
           gridTemplate: 0.6,
         },
         {
           id: 'lastScheduleTime',
           label: t('Last Schedule'),
-          getter: cronJob => getLastScheduleTime(cronJob),
+          getter: cronJob => cronJob.status.lastScheduletime ?? '',
+          render: cronJob => getLastScheduleTime(cronJob),
         },
         {
           id: 'containers',
           label: t('Containers'),
-          getter: deployment => {
-            const containers = deployment.getContainers().map((c: KubeContainer) => c.name);
+          getter: deployment =>
+            deployment
+              .getContainers()
+              .map(c => c.name)
+              .join(', '),
+          render: deployment => {
+            const containers = deployment.getContainers().map(c => c.name);
             const containerText = containers.join(', ');
             const containerTooltip = containers.join('\n');
             return (
               <LightTooltip title={containerTooltip} interactive>
-                {containerText}
+                <>{containerText}</>
               </LightTooltip>
             );
           },
@@ -80,13 +84,18 @@ export default function CronJobList() {
         {
           id: 'images',
           label: t('Images'),
-          getter: deployment => {
-            const images = deployment.getContainers().map((c: KubeContainer) => c.image);
+          getter: deployment =>
+            deployment
+              .getContainers()
+              .map(c => c.image)
+              .join(', '),
+          render: deployment => {
+            const images = deployment.getContainers().map(c => c.image);
             const imageText = images.join(', ');
             const imageTooltip = images.join('\n');
             return (
               <LightTooltip title={imageTooltip} interactive>
-                {imageText}
+                <>{imageText}</>
               </LightTooltip>
             );
           },

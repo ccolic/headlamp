@@ -40,18 +40,17 @@ export default function VpaList() {
             {
               id: 'cpu',
               label: t('glossary|CPU'),
-              getter: item => item?.targetRecommendations?.cpu,
+              getter: item => item?.targetRecommendations?.cpu ?? null,
             },
             {
               id: 'memory',
               label: t('glossary|Memory'),
-              getter: item => item?.targetRecommendations?.memory,
+              getter: item => item?.targetRecommendations?.memory ?? null,
             },
             {
               id: 'provided',
               label: t('translation|Provided'),
-              getter: item => item?.status?.conditions?.[0]?.status,
-              sort: true,
+              getter: item => item?.status?.conditions?.[0]?.status ?? null,
             },
             'age',
           ]}

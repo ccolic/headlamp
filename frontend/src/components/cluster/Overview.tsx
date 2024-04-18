@@ -4,7 +4,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router';
-import Event, { KubeEvent } from '../../lib/k8s/event';
+import { ApiError } from '../../lib/k8s/apiProxy';
+import Event from '../../lib/k8s/event';
 import Node from '../../lib/k8s/node';
 import Pod from '../../lib/k8s/pod';
 import { useFilterFunc } from '../../lib/util';
@@ -68,7 +69,7 @@ function EventsSection() {
   const queryParams = new URLSearchParams(location.search);
   const eventsFilter = queryParams.get('eventsFilter');
   const dispatch = useDispatch();
-  const filterFunc = useFilterFunc(['.jsonData.involvedObject.kind']);
+  const filterFunc = useFilterFunc<Event>(['.jsonData.involvedObject.kind']);
   const [isWarningEventSwitchChecked, setIsWarningEventSwitchChecked] = React.useState(
     Boolean(
       JSON.parse(
@@ -77,9 +78,14 @@ function EventsSection() {
       )
     )
   );
-  const [events, eventsError] = Event.useList({ limit: Event.maxLimit });
+  const [events, eventsError] = Event.useList({ limit: Event.maxLimit }) as [
+    Event[],
+    ApiError | null,
+    any,
+    any
+  ];
 
-  const warningActionFilterFunc = (event: KubeEvent) => {
+  const warningActionFilterFunc = (event: Event) => {
     if (!filterFunc(event)) {
       return false;
     }
@@ -153,7 +159,6 @@ function EventsSection() {
         {
           label: t('Type'),
           getter: event => event.involvedObject.kind,
-          sort: true,
         },
         {
           label: t('Name'),
@@ -163,40 +168,36 @@ function EventsSection() {
             component: 'th',
           },
           gridTemplate: 1.5,
-          sort: true,
         },
         'namespace',
         {
           label: t('Reason'),
-          getter: event => (
+          getter: event => event.reason,
+          render: event => (
             <LightTooltip title={event.reason} interactive>
               {makeStatusLabel(event)}
             </LightTooltip>
           ),
-          sort: (e1: Event, e2: Event) => e1.reason.localeCompare(e2.reason),
         },
         {
           label: t('Message'),
-          getter: event => (
+          getter: event => event.message ?? '',
+          render: event => (
             <ShowHideLabel labelId={event.metadata?.uid || ''}>{event.message || ''}</ShowHideLabel>
           ),
-          sort: true,
           gridTemplate: 1.5,
         },
         {
+          id: 'last-seen',
           label: t('Last Seen'),
-          getter: event => <DateLabel date={event.lastOccurrence} format="mini" />,
+          getter: event => new Date(event.lastOccurrence).getTime(),
+          render: event => <DateLabel date={event.lastOccurrence} format="mini" />,
           cellProps: { style: { textAlign: 'right' } },
           gridTemplate: 'minmax(150px, 0.5fr)',
-          sort: (e1: Event, e2: Event) => {
-            const date1 = e1.lastTimestamp || e1.metadata.creationTimestamp;
-            const date2 = e2.lastTimestamp || e2.metadata.creationTimestamp;
-            return new Date(date2).getTime() - new Date(date1).getTime();
-          },
         },
       ]}
       filterFunction={warningActionFilterFunc}
-      defaultSortingColumn={6}
+      defaultSortingColumn={{ id: 'last-seen', desc: true }}
       id="headlamp-cluster.overview.events"
     />
   );

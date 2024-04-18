@@ -8,8 +8,8 @@ import React from 'react';
 import { ResourceTableColumn } from './ResourceTable';
 
 interface ColumnsPopupProps {
-  columns: ResourceTableColumn[];
-  onToggleColumn: (cols: ResourceTableColumn[]) => void;
+  columns: ResourceTableColumn<unknown>[];
+  onToggleColumn: (cols: ResourceTableColumn<unknown>[]) => void;
   onClose: () => void;
   anchorEl: HTMLElement | null;
 }

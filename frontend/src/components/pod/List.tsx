@@ -92,7 +92,7 @@ export function PodListRenderer(props: PodListProps) {
         noNamespaceFilter,
         noSearch,
       }}
-      hideColumns={hideColumns}
+      disabledColumns={hideColumns}
       errorMessage={Pod.getErrorMessage(error)}
       columns={[
         'name',
@@ -108,7 +108,6 @@ export function PodListRenderer(props: PodListProps) {
                 })
               : restarts;
           },
-          sort: true,
         },
         {
           id: 'ready',
@@ -121,51 +120,55 @@ export function PodListRenderer(props: PodListProps) {
         {
           id: 'status',
           label: t('translation|Status'),
-          getter: makePodStatusLabel,
-          sort: (pod: Pod) => {
-            const podRow = pod.getDetailedStatus();
-            return podRow.reason;
-          },
+          getter: pod => pod.getDetailedStatus().reason,
+          render: makePodStatusLabel,
         },
         {
           id: 'ip',
           label: t('glossary|IP'),
           getter: (pod: Pod) => pod.status.podIP,
-          sort: true,
         },
         {
           id: 'node',
           label: t('glossary|Node'),
-          getter: (pod: Pod) =>
+          getter: pod => pod?.spec?.nodeName,
+          render: pod =>
             pod?.spec?.nodeName && (
               <Link routeName="node" params={{ name: pod.spec.nodeName }} tooltip>
                 {pod.spec.nodeName}
               </Link>
             ),
-          sort: (p1: Pod, p2: Pod) => {
-            return p1?.spec?.nodeName?.localeCompare(p2?.spec?.nodeName || '') || 0;
-          },
         },
         {
           id: 'nominatedNode',
           label: t('glossary|Nominated Node'),
-          getter: (pod: Pod) =>
+          getter: pod => pod?.status?.nominatedNodeName,
+          render: pod =>
             !!pod?.status?.nominatedNodeName && (
               <Link routeName="node" params={{ name: pod?.status?.nominatedNodeName }} tooltip>
                 {pod?.status?.nominatedNodeName}
               </Link>
             ),
-          sort: (p1: Pod, p2: Pod) => {
-            return (
-              p1?.status?.nominatedNodeName?.localeCompare(p2?.status?.nominatedNodeName || '') || 0
-            );
-          },
           show: false,
         },
         {
           id: 'readinessGates',
           label: t('glossary|Readiness Gates'),
-          getter: (pod: Pod) => {
+          getter: pod => {
+            const readinessGatesStatus = getReadinessGatesStatus(pod);
+            const total = Object.keys(readinessGatesStatus).length;
+
+            if (total === 0) {
+              return '';
+            }
+
+            const statusTrueCount = Object.values(readinessGatesStatus).filter(
+              status => status === 'True'
+            ).length;
+
+            return statusTrueCount;
+          },
+          render: (pod: Pod) => {
             const readinessGatesStatus = getReadinessGatesStatus(pod);
             const total = Object.keys(readinessGatesStatus).length;
 
@@ -188,7 +191,7 @@ export function PodListRenderer(props: PodListProps) {
               </LightTooltip>
             );
           },
-          sort: (p1: Pod, p2: Pod) => {
+          sortFn: (p1: Pod, p2: Pod) => {
             const readinessGatesStatus1 = getReadinessGatesStatus(p1);
             const readinessGatesStatus2 = getReadinessGatesStatus(p2);
             const total1 = Object.keys(readinessGatesStatus1).length;

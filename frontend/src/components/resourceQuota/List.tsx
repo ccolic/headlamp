@@ -41,14 +41,15 @@ export function ResourceQuotaRenderer(props: ResourceQuotaProps) {
   return (
     <ResourceListView
       title={t('glossary|Resource Quotas')}
-      hideColumns={hideColumns}
+      disabledColumns={hideColumns}
       columns={[
         'name',
         'namespace',
         {
           id: 'requests',
           label: t('translation|Request'),
-          getter: (item: ResourceQuota) => {
+          getter: item => item.requests.join(', '),
+          render: item => {
             const requests: JSX.Element[] = [];
             item.requests.forEach((request: string) => {
               requests.push(<PaddedChip label={request} variant="outlined" size="small" />);
@@ -65,7 +66,8 @@ export function ResourceQuotaRenderer(props: ResourceQuotaProps) {
         {
           id: 'limits',
           label: t('translation|Limit'),
-          getter: (item: ResourceQuota) => {
+          getter: item => item.limits.join(', '),
+          render: item => {
             const limits: JSX.Element[] = [];
             item.limits.forEach((limit: string) => {
               limits.push(<PaddedChip label={limit} variant="outlined" size="small" />);

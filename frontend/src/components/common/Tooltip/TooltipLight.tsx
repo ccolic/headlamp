@@ -1,13 +1,15 @@
 import Tooltip, { TooltipProps } from '@mui/material/Tooltip';
 import withStyles from '@mui/styles/withStyles';
+import { ReactNode } from 'react';
 
-export interface TooltipLightProps extends TooltipProps {
+export interface TooltipLightProps extends Omit<TooltipProps, 'children'> {
   /**
    * If true, the tooltip will be interactive. Defaults to true.
    *
    * If a tooltip is interactive, it will close when the user hovers over the tooltip before the leaveDelay is expired.
    */
   interactive?: boolean;
+  children: ReactNode;
 }
 
 const StyledTooltip = withStyles(theme => ({
@@ -32,5 +34,5 @@ export default function TooltipLight(props: TooltipLightProps) {
     );
   }
 
-  return <StyledTooltip {...props} />;
+  return <StyledTooltip {...props} children={props.children as any} />;
 }

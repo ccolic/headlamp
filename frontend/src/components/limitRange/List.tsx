@@ -26,7 +26,7 @@ export function LimitRangeRenderer(props: LimitRangeProps) {
     <ResourceListView
       title={t('glossary|LimitRange')}
       columns={['name', 'namespace', 'age']}
-      hideColumns={hideColumns}
+      disabledColumns={hideColumns}
       headerProps={{
         noSearch,
       }}

@@ -212,34 +212,35 @@ function HomeComponent(props: HomeComponentProps) {
       >
         <ResourceTable
           filterFunction={filterFunc}
-          defaultSortingColumn={1}
+          defaultSortingColumn={{ id: 'name', desc: true }}
           columns={[
             {
+              id: 'name',
               label: t('Name'),
-              getter: ({ name }: Cluster) => (
+              getter: cluster => cluster.name,
+              render: ({ name }) => (
                 <Link routeName="cluster" params={{ cluster: name }}>
                   {name}
                 </Link>
               ),
-              sort: (c1: Cluster, c2: Cluster) => c1.name.localeCompare(c2.name),
             },
             {
               label: t('Status'),
-              getter: ({ name }: Cluster) => <ClusterStatus error={errors[name]} />,
+              getter: cluster => cluster.name,
+              render: ({ name }) => <ClusterStatus error={errors[name]} />,
             },
             {
               label: t('Warnings'),
-              getter: ({ name }: Cluster) => renderWarningsText(name),
-              sort: true,
+              getter: ({ name }) => renderWarningsText(name),
             },
             {
               label: t('glossary|Kubernetes Version'),
-              getter: ({ name }: Cluster) => versions[name]?.gitVersion || '⋯',
-              sort: true,
+              getter: ({ name }) => versions[name]?.gitVersion || '⋯',
             },
             {
               label: '',
-              getter: (cluster: Cluster) => (
+              getter: () => '',
+              render: cluster => (
                 <Box textAlign="right">
                   <ContextMenu cluster={cluster} />
                 </Box>

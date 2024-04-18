@@ -25,26 +25,25 @@ export default function StatefulSetList() {
           label: t('Pods'),
           getter: statefulSet => renderPods(statefulSet),
           gridTemplate: 0.6,
-          sort: true,
         },
         {
           id: 'replicas',
           label: t('Replicas'),
           getter: statefulSet => statefulSet.spec.replicas,
           gridTemplate: 0.6,
-          sort: true,
         },
         {
           id: 'containers',
           label: t('Containers'),
-          getter: statefulSet => {
+          getter: statefulSet => statefulSet.containerNames.join(', '),
+          render: statefulSet => {
             const containerNames = statefulSet.getContainers().map((c: KubeContainer) => c.name);
             const containerTooltip = containerNames.join('\n');
             const containerText = containerNames.join(', ');
 
             return (
               <LightTooltip title={containerTooltip} interactive>
-                {containerText}
+                <>{containerText}</>
               </LightTooltip>
             );
           },
@@ -52,13 +51,18 @@ export default function StatefulSetList() {
         {
           id: 'images',
           label: t('Images'),
-          getter: statefulSet => {
+          getter: statefulSet =>
+            statefulSet
+              .getContainers()
+              .map(it => it.image)
+              .join(', '),
+          render: statefulSet => {
             const containerImages = statefulSet.getContainers().map((c: KubeContainer) => c.image);
             const containerTooltip = containerImages.join('\n');
             const containerText = containerImages.join(', ');
             return (
               <LightTooltip title={containerTooltip} interactive>
-                {containerText}
+                <>{containerText}</>
               </LightTooltip>
             );
           },

@@ -16,7 +16,6 @@ export default function PDBList() {
           id: 'minAvailable',
           label: t('translation|Min Available'),
           getter: (item: PDB) => item.spec.minAvailable || t('translation|N/A'),
-          sort: true,
         },
         {
           id: 'maxUnavailable',
