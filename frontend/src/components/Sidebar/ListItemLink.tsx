@@ -3,24 +3,22 @@ import { Tooltip } from '@mui/material';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import withStyles from '@mui/styles/withStyles';
+import { styled } from '@mui/system';
 import React from 'react';
 import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
 
 const ExpandedIconSize = 20;
 const CollapsedIconSize = 24;
 
-const IconTooltip = withStyles(() => ({
-  tooltip: {
-    backgroundColor: '#474747',
-    color: '#fff',
-    minWidth: 60,
-    padding: '0.5rem',
-    fontSize: '0.8rem',
-    border: '1px solid #474747',
-    marginLeft: '1rem',
-  },
-}))(Tooltip);
+const IconTooltip = styled(Tooltip)(() => ({
+  backgroundColor: '#474747',
+  color: '#fff',
+  minWidth: 60,
+  padding: '0.5rem',
+  fontSize: '0.8rem',
+  border: '1px solid #474747',
+  marginLeft: '1rem',
+}));
 
 interface ListItemLinkProps {
   primary: string;
