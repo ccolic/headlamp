@@ -941,8 +941,8 @@ exports[`Storyshots Pod/PodDetailsView Error 1`] = `
                         class="MuiBox-root css-k008qs"
                       >
                         <label
-                          class="makeStyles-fullText"
                           id="abc123456"
+                          style="word-break: break-all;"
                         >
                           failed to get cpu utilization: missing request for cpu
                         </label>
@@ -2115,8 +2115,8 @@ exports[`Storyshots Pod/PodDetailsView Initializing 1`] = `
                         class="MuiBox-root css-k008qs"
                       >
                         <label
-                          class="makeStyles-fullText"
                           id=""
+                          style="word-break: break-all;"
                         >
                           Created
                         </label>
@@ -3181,8 +3181,8 @@ exports[`Storyshots Pod/PodDetailsView Liveness Failed 1`] = `
                         class="MuiBox-root css-k008qs"
                       >
                         <label
-                          class="makeStyles-fullText"
                           id=""
+                          style="word-break: break-all;"
                         >
                           Created
                         </label>
@@ -4128,8 +4128,8 @@ exports[`Storyshots Pod/PodDetailsView Pull Back Off 1`] = `
                         class="MuiBox-root css-k008qs"
                       >
                         <label
-                          class="makeStyles-fullText"
                           id=""
+                          style="word-break: break-all;"
                         >
                           Created
                         </label>
@@ -5103,8 +5103,8 @@ exports[`Storyshots Pod/PodDetailsView Running 1`] = `
                         class="MuiBox-root css-k008qs"
                       >
                         <label
-                          class="makeStyles-fullText"
                           id=""
+                          style="word-break: break-all;"
                         >
                           Created
                         </label>
@@ -6075,8 +6075,8 @@ exports[`Storyshots Pod/PodDetailsView Successful 1`] = `
                         class="MuiBox-root css-k008qs"
                       >
                         <label
-                          class="makeStyles-fullText"
                           id=""
+                          style="word-break: break-all;"
                         >
                           Created
                         </label>
