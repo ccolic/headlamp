@@ -91,6 +91,9 @@ spec:
             {{- with .Values.config.baseURL }}
             - "-base-url={{ . }}"
             {{- end }}
+            {{- range .Values.config.extraArgs }}
+            - "{{ . }}"
+            {{- end }}
           ports:
             - name: http
               containerPort: 4466
