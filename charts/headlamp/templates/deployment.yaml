@@ -37,34 +37,56 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           {{ if or .Values.config.oidc .Values.env }}
           env:
-            {{- with .Values.config.oidc }}
-            {{- if or .clientID (not .secret.create) }}
+            {{- if .Values.config.oidc.secret.create }}
+            {{- if .Values.config.oidc.clientID }}
             - name: OIDC_CLIENT_ID
               valueFrom:
                 secretKeyRef:
-                  name: {{ .secret.name }}
+                  name: {{ .Values.config.oidc.secret.name }}
                   key: clientID
             {{- end }}
-            {{- if or .clientSecret (not .secret.create) }}
+            {{- if .Values.config.oidc.clientSecret }}
             - name: OIDC_CLIENT_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: {{ .secret.name }}
+                  name: {{ .Values.config.oidc.secret.name }}
                   key: clientSecret
             {{- end }}
-            {{- if or .issuerURL (not .secret.create) }}
+            {{- if .Values.config.oidc.issuerURL }}
             - name: OIDC_ISSUER_URL
               valueFrom:
                 secretKeyRef:
-                  name: {{ .secret.name }}
+                  name: {{ .Values.config.oidc.secret.name }}
                   key: issuerURL
             {{- end }}
-            {{- if or .scopes (not .secret.create) }}
+            {{- if .Values.config.oidc.scopes }}
             - name: OIDC_SCOPES
               valueFrom:
                 secretKeyRef:
-                  name: {{ .secret.name }}
+                  name: {{ .Values.config.oidc.secret.name }}
                   key: scopes
+            {{- end }}
+            {{- else if .Values.config.oidc.externalSecret.enabled }}
+            # Check if externalSecret is enabled
+            envFrom:
+              - secretRef:
+                  name: {{ .Values.config.oidc.externalSecret.name }}
+            {{- else }}
+            {{- if .Values.config.oidc.clientID }}
+            - name: OIDC_CLIENT_ID
+              value: {{ .Values.config.oidc.clientID }}
+            {{- end }}
+            {{- if .Values.config.oidc.clientSecret }}
+            - name: OIDC_CLIENT_SECRET
+              value: {{ .Values.config.oidc.clientSecret }}
+            {{- end }}
+            {{- if .Values.config.oidc.issuerURL }}
+            - name: OIDC_ISSUER_URL
+              value: {{ .Values.config.oidc.issuerURL }}
+            {{- end }}
+            {{- if .Values.config.oidc.scopes }}
+            - name: OIDC_SCOPES
+              value: {{ .Values.config.oidc.scopes }}
             {{- end }}
             {{- end }}
             {{- if .Values.env }}
@@ -76,16 +98,27 @@ spec:
             {{- with .Values.config.pluginsDir}}
             - "-plugins-dir={{ . }}"
             {{- end }}
-            {{- if or .Values.config.oidc.clientID (not .Values.config.oidc.secret.create) }}
+            {{- if or (and .Values.config.oidc.clientID (not .Values.config.oidc.secret.create)) (and .Values.config.oidc.secret.create (ne .Values.config.oidc.clientID "")) }}
+            # Check if clientID is set and secret.create is false, or if secret.create is true and clientID is not an empty string
             - "-oidc-client-id=$(OIDC_CLIENT_ID)"
             {{- end }}
-            {{- if or .Values.config.oidc.clientSecret (not .Values.config.oidc.secret.create) }}
+            {{- if or (and .Values.config.oidc.clientSecret (not .Values.config.oidc.secret.create)) (and .Values.config.oidc.secret.create (ne .Values.config.oidc.clientSecret "")) }}
+            # Check if clientSecret is set and secret.create is false, or if secret.create is true and clientSecret is not an empty string
             - "-oidc-client-secret=$(OIDC_CLIENT_SECRET)"
             {{- end }}
-            {{- if or .Values.config.oidc.issuerURL (not .Values.config.oidc.secret.create) }}
+            {{- if or (and .Values.config.oidc.issuerURL (not .Values.config.oidc.secret.create)) (and .Values.config.oidc.secret.create (ne .Values.config.oidc.issuerURL "")) }}
+            # Check if issuerURL is set and secret.create is false, or if secret.create is true and issuerURL is not an empty string
             - "-oidc-idp-issuer-url=$(OIDC_ISSUER_URL)"
             {{- end }}
-            {{- if or .Values.config.oidc.scopes (not .Values.config.oidc.secret.create) }}
+            {{- if or (and .Values.config.oidc.scopes (not .Values.config.oidc.secret.create)) (and .Values.config.oidc.secret.create (ne .Values.config.oidc.scopes "")) }}
+            # Check if scopes are set and secret.create is false, or if secret.create is true and scopes are not an empty string
+            - "-oidc-scopes=$(OIDC_SCOPES)"
+            {{- end }}
+            {{- if .Values.config.oidc.externalSecret.enabled }}
+            # Check if externalSecret is enabled
+            - "-oidc-client-id=$(OIDC_CLIENT_ID)"
+            - "-oidc-client-secret=$(OIDC_CLIENT_SECRET)"
+            - "-oidc-idp-issuer-url=$(OIDC_ISSUER_URL)"
             - "-oidc-scopes=$(OIDC_SCOPES)"
             {{- end }}
             {{- with .Values.config.baseURL }}
