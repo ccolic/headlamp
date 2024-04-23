@@ -9,9 +9,11 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.42.1",
-    "@types/node": "^20.12.2"
+    "@types/node": "^20.12.2",
+    "@kinvolk/eslint-config": "^0.5.0"
   },
   "dependencies": {
     "yaml": "^2.3.4"
-  }
+  },
+  "prettier": "@kinvolk/eslint-config/prettier-config"
 }
