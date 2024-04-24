@@ -76,7 +76,7 @@ export default function CronJobList() {
             const containerTooltip = containers.join('\n');
             return (
               <LightTooltip title={containerTooltip} interactive>
-                <>{containerText}</>
+                {containerText}
               </LightTooltip>
             );
           },
@@ -95,7 +95,7 @@ export default function CronJobList() {
             const imageTooltip = images.join('\n');
             return (
               <LightTooltip title={imageTooltip} interactive>
-                <>{imageText}</>
+                {imageText}
               </LightTooltip>
             );
           },

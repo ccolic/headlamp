@@ -1,9 +1,8 @@
 import { useTheme } from '@mui/material/styles';
-import { MRT_SortingFn } from 'material-react-table';
-import { ComponentProps, ReactNode, useEffect, useMemo, useState } from 'react';
+import { MRT_Row, MRT_SortingFn } from 'material-react-table';
+import { ComponentProps, ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import helpers from '../../../helpers';
-import { useThrottle } from '../../../hooks/useThrottle';
 import { KubeObject } from '../../../lib/k8s/cluster';
 import { useFilterFunc } from '../../../lib/util';
 import { HeadlampEventType, useEventCallback } from '../../../redux/headlampEventSlice';
@@ -27,11 +26,12 @@ export type ResourceTableColumn<RowItem> = {
   /**
    * By default the column will be sorted by the value provided in the getter
    * but you can provide your own sorting function here
+   *
+   * @default true
    **/
-  sortFn?: (a: RowItem, b: RowItem) => number;
+  sort?: boolean | ((a: RowItem, b: RowItem) => number);
   /** Change how filtering behaves, by default it will just search the text value */
   filterVariant?: TableColumn<any>['filterVariant'];
-  disableSorting?: boolean;
   disableFiltering?: boolean;
 } & (
   | {
@@ -41,7 +41,7 @@ export type ResourceTableColumn<RowItem> = {
   | {
       /** How to render a cell */
       render?: (item: RowItem) => ReactNode;
-      /** Plain value for filtering and sorting, if render is set then this value is not visible! */
+      /** Plain value for filtering and sorting. This is going to be displayed unless render property is defined */
       getter: (item: RowItem) => string | number | null | undefined;
     }
 );
@@ -52,7 +52,7 @@ export interface ResourceTableProps<RowItem> {
   /** The columns to be rendered, like used in SimpleTable, or by name. */
   columns: (ResourceTableColumn<RowItem> | ColumnType)[];
   /** Provide a list of columns that won't be shown and cannot be turned on */
-  disabledColumns?: string[] | null;
+  hideColumns?: string[] | null;
   /** ID for the table. Will be used by plugins to identify this table.
    * Official tables in Headlamp will have the 'headlamp-' prefix for their IDs which is followed by the resource's plural name or the section in Headlamp the table is in.
    * Plugins should use their own prefix when creating tables, to avoid any clashes.
@@ -141,7 +141,46 @@ function initColumnVisibilityState(columns: ResourceTableProps<any>['columns'], 
 function sortingFn(sortFn?: (a: any, b: any) => number): MRT_SortingFn<any> | undefined {
   if (!sortFn) return undefined;
 
-  return (a, b) => sortFn(a.original, b.original);
+  return (a: any, b: any) => sortFn(a.original, b.original);
+}
+
+/**
+ * Returns a throttled version of the input value.
+ *
+ * @param value - The value to be throttled.
+ * @param interval - The interval in milliseconds to throttle the value.
+ * @returns The throttled value.
+ */
+export function useThrottle(value: any, interval = 1000): any {
+  const [throttledValue, setThrottledValue] = useState(value);
+  const lastEffected = useRef(Date.now() + interval);
+
+  // Ensure we don't throttle holding the loading null or undefined value before
+  // real data comes in. Otherwise we could wait up to interval milliseconds
+  // before we update the throttled value.
+  //
+  //   numEffected == 0,  null, or undefined whilst loading.
+  //   numEffected == 1,  real data.
+  const numEffected = useRef(0);
+
+  useEffect(() => {
+    const now = Date.now();
+
+    if (now >= lastEffected.current + interval || numEffected.current < 2) {
+      numEffected.current = numEffected.current + 1;
+      lastEffected.current = now;
+      setThrottledValue(value);
+    } else {
+      const id = window.setTimeout(() => {
+        lastEffected.current = now;
+        setThrottledValue(value);
+      }, interval);
+
+      return () => window.clearTimeout(id);
+    }
+  }, [value, interval]);
+
+  return throttledValue;
 }
 
 function ResourceTableContent<RowItem>(props: ResourceTableProps<RowItem>) {
@@ -150,7 +189,7 @@ function ResourceTableContent<RowItem>(props: ResourceTableProps<RowItem>) {
     defaultSortingColumn,
     id,
     noProcessing = false,
-    disabledColumns = [],
+    hideColumns: disabledColumns = [],
     filterFunction,
     errorMessage,
     reflectInURL,
@@ -188,25 +227,29 @@ function ResourceTableContent<RowItem>(props: ResourceTableProps<RowItem>) {
         if (typeof col !== 'string') {
           const column = col as ResourceTableColumn<RowItem>;
 
+          const sort = column.sort ?? true;
+
           const mrtColumn: TableColumn<KubeObject> = {
             id: column.id ?? indexId,
             header: column.label,
             filterVariant: column.filterVariant,
-            enableMultiSort: !column.disableSorting,
-            enableSorting: !column.disableSorting,
+            enableMultiSort: !!sort,
+            enableSorting: !!sort,
             enableColumnFilter: !column.disableFiltering,
+            muiTableBodyCellProps: column.cellProps,
           };
 
           if ('getter' in column) {
             mrtColumn.accessorFn = column.getter;
           } else {
-            mrtColumn.accessorFn = item => item[column.datum];
+            mrtColumn.accessorFn = (item: KubeObject) => item[column.datum];
           }
           if ('render' in column) {
-            mrtColumn.Cell = ({ row }) => column.render?.(row.original) ?? null;
+            mrtColumn.Cell = ({ row }: { row: MRT_Row<any> }) =>
+              column.render?.(row.original) ?? null;
           }
-          if (column.sortFn) {
-            mrtColumn.sortingFn = sortingFn(column.sortFn);
+          if (sort && typeof sort === 'function') {
+            mrtColumn.sortingFn = sortingFn(sort);
           }
 
           return mrtColumn;
@@ -217,16 +260,17 @@ function ResourceTableContent<RowItem>(props: ResourceTableProps<RowItem>) {
             return {
               id: 'name',
               header: t('translation|Name'),
-              accessorFn: item => item.metadata.name,
-              Cell: ({ row }) => row.original && <Link kubeObject={row.original} />,
+              accessorFn: (item: KubeObject) => item.metadata.name,
+              Cell: ({ row }: { row: MRT_Row<any> }) =>
+                row.original && <Link kubeObject={row.original} />,
             };
           case 'age':
             return {
               id: 'age',
               header: t('translation|Age'),
-              accessorFn: item => item.metadata.creationTimestamp,
+              accessorFn: (item: KubeObject) => item.metadata.creationTimestamp,
               enableColumnFilter: false,
-              Cell: ({ row }) =>
+              Cell: ({ row }: { row: MRT_Row<KubeObject> }) =>
                 row.original && (
                   <DateLabel
                     date={row.original.metadata.creationTimestamp}
@@ -239,9 +283,9 @@ function ResourceTableContent<RowItem>(props: ResourceTableProps<RowItem>) {
             return {
               id: 'namespace',
               header: t('glossary|Namespace'),
-              accessorFn: item => item.getNamespace(),
+              accessorFn: (item: KubeObject) => item.getNamespace(),
               filterVariant: 'multi-select',
-              Cell: ({ row }) =>
+              Cell: ({ row }: { row: MRT_Row<KubeObject> }) =>
                 row.original?.getNamespace() ? (
                   <Link routeName="namespace" params={{ name: row.original.getNamespace() }}>
                     {row.original.getNamespace()}
@@ -255,7 +299,7 @@ function ResourceTableContent<RowItem>(props: ResourceTableProps<RowItem>) {
             return {
               id: 'kind',
               header: t('translation|Type'),
-              Cell: ({ row }) => row.original.kind,
+              Cell: ({ row }: { row: MRT_Row<KubeObject> }) => row.original.kind,
               accessorFn: (resource: KubeObject) => resource?.kind,
               filterVariant: 'multi-select',
             };

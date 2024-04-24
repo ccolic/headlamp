@@ -1022,19 +1022,37 @@ exports[`Storyshots DaemonSet/List Daemon Sets 1`] = `
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1rzsx7v-MuiTableCell-root"
                     data-index="6"
                   >
-                    kubernetes.io/os=linux
+                    <span
+                      aria-label="kubernetes.io/os=linux"
+                      class=""
+                      data-mui-internal-clone-element="true"
+                    >
+                      kubernetes.io/os=linux
+                    </span>
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-ceay95-MuiTableCell-root"
                     data-index="7"
                   >
-                    gadget
+                    <span
+                      aria-label="gadget"
+                      class=""
+                      data-mui-internal-clone-element="true"
+                    >
+                      gadget
+                    </span>
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-15koqbe-MuiTableCell-root"
                     data-index="8"
                   >
-                    ghcr.io/inspektor-gadget/inspektor-gadget:v0.15.0
+                    <span
+                      aria-label="ghcr.io/inspektor-gadget/inspektor-gadget:v0.15.0"
+                      class=""
+                      data-mui-internal-clone-element="true"
+                    >
+                      ghcr.io/inspektor-gadget/inspektor-gadget:v0.15.0
+                    </span>
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"

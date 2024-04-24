@@ -141,7 +141,7 @@ export default function RoleBindingList() {
               }
             />
           ),
-          sortFn: sortBindings('User'),
+          sort: sortBindings('User'),
         },
         {
           id: 'groups',
@@ -160,7 +160,7 @@ export default function RoleBindingList() {
               }
             />
           ),
-          sortFn: sortBindings('Group'),
+          sort: sortBindings('Group'),
         },
         {
           id: 'serviceaccounts',
@@ -179,7 +179,7 @@ export default function RoleBindingList() {
               }
             />
           ),
-          sortFn: sortBindings('Service Accounts'),
+          sort: sortBindings('Service Accounts'),
         },
         'age',
       ]}

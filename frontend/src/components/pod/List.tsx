@@ -92,7 +92,7 @@ export function PodListRenderer(props: PodListProps) {
         noNamespaceFilter,
         noSearch,
       }}
-      disabledColumns={hideColumns}
+      hideColumns={hideColumns}
       errorMessage={Pod.getErrorMessage(error)}
       columns={[
         'name',
@@ -191,7 +191,7 @@ export function PodListRenderer(props: PodListProps) {
               </LightTooltip>
             );
           },
-          sortFn: (p1: Pod, p2: Pod) => {
+          sort: (p1: Pod, p2: Pod) => {
             const readinessGatesStatus1 = getReadinessGatesStatus(p1);
             const readinessGatesStatus2 = getReadinessGatesStatus(p2);
             const total1 = Object.keys(readinessGatesStatus1).length;

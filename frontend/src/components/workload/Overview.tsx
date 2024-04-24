@@ -129,7 +129,7 @@ export default function Overview() {
             id: 'pods',
             label: t('Pods'),
             getter: item => item && getPods(item),
-            sortFn: sortByReplicas,
+            sort: sortByReplicas,
           },
           'age',
         ]}

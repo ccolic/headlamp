@@ -68,7 +68,7 @@ export default function DeploymentsList() {
           label: t('Pods'),
           getter: deployment => deployment.status.availableReplicas,
           render: deployment => renderPods(deployment),
-          sortFn: sortByPods,
+          sort: sortByPods,
           gridTemplate: 0.5,
         },
         {
@@ -97,7 +97,7 @@ export default function DeploymentsList() {
             const containerTooltip = containers.join('\n');
             return (
               <LightTooltip title={containerTooltip} interactive>
-                <>{containerText}</>
+                {containerText}
               </LightTooltip>
             );
           },
@@ -116,7 +116,7 @@ export default function DeploymentsList() {
             const imageTooltip = images.join('\n');
             return (
               <LightTooltip title={imageTooltip} interactive>
-                <>{imageText}</>
+                {imageText}
               </LightTooltip>
             );
           },
@@ -131,7 +131,7 @@ export default function DeploymentsList() {
             const tooltip = matchLabels.join('\n');
             return (
               <LightTooltip title={tooltip} interactive>
-                <>{text}</>
+                {text}
               </LightTooltip>
             );
           },

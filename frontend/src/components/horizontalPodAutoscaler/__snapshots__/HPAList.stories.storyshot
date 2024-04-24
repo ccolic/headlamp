@@ -853,6 +853,7 @@ exports[`Storyshots hpa/HpaListView Items 1`] = `
                 <td
                   class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nis9ey-MuiTableCell-root"
                   data-index="3"
+                  style="min-width: 100%;"
                 >
                   <div
                     class="css-12ju9pi"
@@ -951,6 +952,7 @@ exports[`Storyshots hpa/HpaListView Items 1`] = `
                 <td
                   class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nis9ey-MuiTableCell-root"
                   data-index="3"
+                  style="min-width: 100%;"
                 >
                   <div
                     class="css-12ju9pi"
@@ -1049,6 +1051,7 @@ exports[`Storyshots hpa/HpaListView Items 1`] = `
                 <td
                   class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nis9ey-MuiTableCell-root"
                   data-index="3"
+                  style="min-width: 100%;"
                 >
                   <div
                     class="css-12ju9pi"
@@ -1147,6 +1150,7 @@ exports[`Storyshots hpa/HpaListView Items 1`] = `
                 <td
                   class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nis9ey-MuiTableCell-root"
                   data-index="3"
+                  style="min-width: 100%;"
                 >
                   <div
                     class="css-12ju9pi"
@@ -1245,6 +1249,7 @@ exports[`Storyshots hpa/HpaListView Items 1`] = `
                 <td
                   class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nis9ey-MuiTableCell-root"
                   data-index="3"
+                  style="min-width: 100%;"
                 >
                   <div
                     class="css-12ju9pi"

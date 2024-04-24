@@ -90,7 +90,7 @@ export function JobsListRenderer(props: JobsListRendererProps) {
       headerProps={{
         noNamespaceFilter,
       }}
-      disabledColumns={hideColumns}
+      hideColumns={hideColumns}
       errorMessage={error}
       columns={[
         'name',
@@ -99,7 +99,7 @@ export function JobsListRenderer(props: JobsListRendererProps) {
           id: 'completions',
           label: t('Completions'),
           getter: job => getCompletions(job),
-          sortFn: sortByCompletions,
+          sort: sortByCompletions,
         },
         {
           id: 'conditions',

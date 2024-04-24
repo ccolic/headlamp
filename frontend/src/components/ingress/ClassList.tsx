@@ -21,7 +21,7 @@ export default function IngressClassList() {
           getter: resource => (resource?.isDefault ? t('Default Ingress Class') : null),
           render: (resource: IngressClass) =>
             resource && resource.isDefault ? <DefaultLabel /> : null,
-          disableSorting: true,
+          sort: false,
           disableFiltering: true,
         },
         'name',

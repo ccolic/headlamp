@@ -652,6 +652,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                       <td
                         class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-7q91bi-MuiTableCell-root"
                         data-index="1"
+                        style="min-width: 100%;"
                       >
                         <div
                           class="MuiBox-root css-am63uh"
@@ -717,6 +718,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                       <td
                         class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-7q91bi-MuiTableCell-root"
                         data-index="1"
+                        style="min-width: 100%;"
                       >
                         <div
                           class="MuiBox-root css-am63uh"
@@ -782,6 +784,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                       <td
                         class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-7q91bi-MuiTableCell-root"
                         data-index="1"
+                        style="min-width: 100%;"
                       >
                         <div
                           class="MuiBox-root css-am63uh"
@@ -847,6 +850,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                       <td
                         class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-7q91bi-MuiTableCell-root"
                         data-index="1"
+                        style="min-width: 100%;"
                       >
                         <div
                           class="MuiBox-root css-am63uh"
@@ -912,6 +916,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                       <td
                         class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-7q91bi-MuiTableCell-root"
                         data-index="1"
+                        style="min-width: 100%;"
                       >
                         <div
                           class="MuiBox-root css-am63uh"

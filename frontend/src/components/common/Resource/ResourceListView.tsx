@@ -21,9 +21,8 @@ export default function ResourceListView<ItemType>(
   props: ResourceListViewProps<ItemType> | ResourceListViewWithResourceClassProps<ItemType>
 ) {
   const { title, children, headerProps, ...tableProps } = props;
-  const withNamespaceFilter = (
-    (props as ResourceListViewWithResourceClassProps<KubeObject>).resourceClass as KubeObject
-  )?.isNamespaced;
+  const withNamespaceFilter =
+    'resourceClass' in props && (props.resourceClass as KubeObject)?.isNamespaced;
 
   return (
     <SectionBox

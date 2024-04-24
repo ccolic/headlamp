@@ -984,7 +984,7 @@ exports[`Storyshots node/List Nodes 1`] = `
                     </a>
                   </td>
                   <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1eccyt0-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-orndu8-MuiTableCell-root"
                     data-index="1"
                   >
                     <div
@@ -993,7 +993,7 @@ exports[`Storyshots node/List Nodes 1`] = `
                     />
                   </td>
                   <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-wx1d8m-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-2va0j7-MuiTableCell-root"
                     data-index="2"
                   >
                     <div
@@ -1074,7 +1074,7 @@ exports[`Storyshots node/List Nodes 1`] = `
                     </a>
                   </td>
                   <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1eccyt0-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-orndu8-MuiTableCell-root"
                     data-index="1"
                   >
                     <div
@@ -1083,7 +1083,7 @@ exports[`Storyshots node/List Nodes 1`] = `
                     />
                   </td>
                   <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-wx1d8m-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-2va0j7-MuiTableCell-root"
                     data-index="2"
                   >
                     <div

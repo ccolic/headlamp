@@ -1,6 +1,6 @@
 import Tooltip, { TooltipProps } from '@mui/material/Tooltip';
 import withStyles from '@mui/styles/withStyles';
-import { ReactNode } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 export interface TooltipLightProps extends Omit<TooltipProps, 'children'> {
   /**
@@ -34,5 +34,13 @@ export default function TooltipLight(props: TooltipLightProps) {
     );
   }
 
-  return <StyledTooltip {...props} children={props.children as any} />;
+  return (
+    <StyledTooltip
+      {...props}
+      // children prop in the mui Tooltip is defined as ReactElement which is not totally correct
+      // string should be a valid child and is used a lot in this project
+      // but it's not included in the ReactElement type
+      children={props.children as unknown as ReactElement}
+    />
+  );
 }

@@ -1155,9 +1155,10 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                         >
                           Pod
                         </td>
-                        <td
+                        <th
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1phqppa-MuiTableCell-root"
                           data-index="1"
+                          scope="row"
                         >
                           <a
                             class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-srrjpp-MuiTypography-root-MuiLink-root"
@@ -1165,7 +1166,7 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                           >
                             nginx-deployment-abcd-1234567890
                           </a>
-                        </td>
+                        </th>
                         <td
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-vf4ba6-MuiTableCell-root"
                           data-index="2"
@@ -1208,6 +1209,7 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                         <td
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1wrno0g-MuiTableCell-root"
                           data-index="5"
+                          style="text-align: right;"
                         >
                           <p
                             aria-label="2024-02-13T15:42:17.000Z"
@@ -1229,9 +1231,10 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                         >
                           Pod
                         </td>
-                        <td
+                        <th
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1phqppa-MuiTableCell-root"
                           data-index="1"
+                          scope="row"
                         >
                           <a
                             class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-srrjpp-MuiTypography-root-MuiLink-root"
@@ -1239,7 +1242,7 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                           >
                             nginx-deployment-1234567890-abcde
                           </a>
-                        </td>
+                        </th>
                         <td
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-vf4ba6-MuiTableCell-root"
                           data-index="2"
@@ -1282,6 +1285,7 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                         <td
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1wrno0g-MuiTableCell-root"
                           data-index="5"
+                          style="text-align: right;"
                         >
                           <p
                             aria-label="2024-02-13T14:42:17.000Z"
@@ -1303,9 +1307,10 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                         >
                           HorizontalPodAutoscaler
                         </td>
-                        <td
+                        <th
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1phqppa-MuiTableCell-root"
                           data-index="1"
+                          scope="row"
                         >
                           <a
                             class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-srrjpp-MuiTypography-root-MuiLink-root"
@@ -1313,7 +1318,7 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                           >
                             nginx-deployment
                           </a>
-                        </td>
+                        </th>
                         <td
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-vf4ba6-MuiTableCell-root"
                           data-index="2"
@@ -1356,6 +1361,7 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                         <td
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1wrno0g-MuiTableCell-root"
                           data-index="5"
+                          style="text-align: right;"
                         >
                           <p
                             aria-label="2023-07-13T14:42:17.000Z"

@@ -43,7 +43,7 @@ export default function StatefulSetList() {
 
             return (
               <LightTooltip title={containerTooltip} interactive>
-                <>{containerText}</>
+                {containerText}
               </LightTooltip>
             );
           },
@@ -62,7 +62,7 @@ export default function StatefulSetList() {
             const containerText = containerImages.join(', ');
             return (
               <LightTooltip title={containerTooltip} interactive>
-                <>{containerText}</>
+                {containerText}
               </LightTooltip>
             );
           },

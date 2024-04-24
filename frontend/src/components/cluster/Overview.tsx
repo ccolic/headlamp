@@ -4,7 +4,6 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router';
-import { ApiError } from '../../lib/k8s/apiProxy';
 import Event from '../../lib/k8s/event';
 import Node from '../../lib/k8s/node';
 import Pod from '../../lib/k8s/pod';
@@ -78,12 +77,7 @@ function EventsSection() {
       )
     )
   );
-  const [events, eventsError] = Event.useList({ limit: Event.maxLimit }) as [
-    Event[],
-    ApiError | null,
-    any,
-    any
-  ];
+  const [events, eventsError] = Event.useList({ limit: Event.maxLimit });
 
   const warningActionFilterFunc = (event: Event) => {
     if (!filterFunc(event)) {

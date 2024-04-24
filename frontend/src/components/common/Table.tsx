@@ -2,8 +2,8 @@ import { Paper } from '@mui/material';
 import { useTheme } from '@mui/styles';
 import {
   MaterialReactTable,
-  MRT_ColumnDef,
-  MRT_TableOptions,
+  MRT_ColumnDef as MaterialTableColumn,
+  MRT_TableOptions as MaterialTableOptions,
   useMaterialReactTable,
 } from 'material-react-table';
 import { useEffect, useMemo, useState } from 'react';
@@ -17,7 +17,7 @@ import Loader from './Loader';
 /**
  * @see https://www.material-react-table.com/docs/api/column-options
  */
-export type TableColumn<RowItem extends Record<string, any>, Value = any> = MRT_ColumnDef<
+export type TableColumn<RowItem extends Record<string, any>, Value = any> = MaterialTableColumn<
   RowItem,
   Value
 >;
@@ -27,7 +27,7 @@ export type TableColumn<RowItem extends Record<string, any>, Value = any> = MRT_
  *
  * @see https://www.material-react-table.com/docs/api/table-options
  */
-export type TableProps<RowItem extends Record<string, any>> = MRT_TableOptions<RowItem> & {
+export type TableProps<RowItem extends Record<string, any>> = MaterialTableOptions<RowItem> & {
   emptyMessage?: string;
   errorMessage?: any;
   /** Whether to reflect the page/perPage properties in the URL.

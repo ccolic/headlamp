@@ -135,7 +135,7 @@ const withHiddenCols: ResourceTableFromResourceClassProps<MyPod> = {
     'age',
   ],
   resourceClass: MyPod,
-  disabledColumns: ['namespace'],
+  hideColumns: ['namespace'],
 };
 
 export const NoFilter = TemplateWithFilter.bind({});

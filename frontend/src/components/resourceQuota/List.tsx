@@ -41,7 +41,7 @@ export function ResourceQuotaRenderer(props: ResourceQuotaProps) {
   return (
     <ResourceListView
       title={t('glossary|Resource Quotas')}
-      disabledColumns={hideColumns}
+      hideColumns={hideColumns}
       columns={[
         'name',
         'namespace',

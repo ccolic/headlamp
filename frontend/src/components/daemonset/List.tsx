@@ -48,7 +48,7 @@ export default function DaemonSetList() {
             const nodeSelectorText = selectors.join(', ');
             return (
               <LightTooltip title={nodeSelectorTooltip} interactive>
-                <>{nodeSelectorText}</>
+                {nodeSelectorText}
               </LightTooltip>
             );
           },
@@ -67,7 +67,7 @@ export default function DaemonSetList() {
             const containerTooltip = containerNames.join('\n');
             return (
               <LightTooltip title={containerTooltip} interactive>
-                <>{containerText}</>
+                {containerText}
               </LightTooltip>
             );
           },
@@ -86,7 +86,7 @@ export default function DaemonSetList() {
             const imageText = images.join(', ');
             return (
               <LightTooltip title={imageTooltip} interactive>
-                <>{imageText}</>
+                {imageText}
               </LightTooltip>
             );
           },
