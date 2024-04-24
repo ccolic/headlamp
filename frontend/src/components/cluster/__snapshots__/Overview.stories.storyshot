@@ -774,12 +774,12 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                                 Name
                               </div>
                               <span
-                                aria-label="Sort by Name descending"
+                                aria-label="Sort by Name ascending"
                                 class="MuiBadge-root css-1c32n2y-MuiBadge-root"
                                 data-mui-internal-clone-element="true"
                               >
                                 <span
-                                  aria-label="Sort by Name descending"
+                                  aria-label="Sort by Name ascending"
                                   class="MuiButtonBase-root MuiTableSortLabel-root Mui-active css-118d58w-MuiButtonBase-root-MuiTableSortLabel-root"
                                   role="button"
                                   tabindex="0"
@@ -1065,16 +1065,16 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                           </div>
                         </th>
                         <th
-                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-19dmmpd-MuiTableCell-root"
+                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeMedium css-8lyl3-MuiTableCell-root"
                           colspan="1"
                           data-index="5"
                           scope="col"
                         >
                           <div
-                            class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            class="Mui-TableHeadCell-Content MuiBox-root css-15mqaut"
                           >
                             <div
-                              class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              class="Mui-TableHeadCell-Content-Labels MuiBox-root css-1bh2skb"
                             >
                               <div
                                 class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
@@ -1082,19 +1082,19 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                                 Last Seen
                               </div>
                               <span
-                                aria-label="Sorted by Last Seen descending"
+                                aria-label="Sorted by Last Seen ascending"
                                 class="MuiBadge-root css-1c32n2y-MuiBadge-root"
                                 data-mui-internal-clone-element="true"
                               >
                                 <span
-                                  aria-label="Sorted by Last Seen descending"
+                                  aria-label="Sorted by Last Seen ascending"
                                   class="MuiButtonBase-root MuiTableSortLabel-root Mui-active css-1j43wpm-MuiButtonBase-root-MuiTableSortLabel-root"
                                   role="button"
                                   tabindex="0"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionDesc css-3l415a-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
                                     data-testid="ArrowDownwardIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1155,10 +1155,9 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                         >
                           Pod
                         </td>
-                        <th
+                        <td
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1phqppa-MuiTableCell-root"
                           data-index="1"
-                          scope="row"
                         >
                           <a
                             class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-srrjpp-MuiTypography-root-MuiLink-root"
@@ -1166,7 +1165,7 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                           >
                             nginx-deployment-abcd-1234567890
                           </a>
-                        </th>
+                        </td>
                         <td
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-vf4ba6-MuiTableCell-root"
                           data-index="2"
@@ -1184,7 +1183,7 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                         >
                           <span
                             aria-label="FailedGetResourceMetric"
-                            class="MuiTypography-root MuiTypography-body1 makeStyles-statusLabel css-19rs0eg-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 makeStyles-statusLabel css-1tmhfi1-MuiTypography-root"
                             data-mui-internal-clone-element="true"
                             style="background-color: rgb(255, 243, 224); color: rgb(196, 69, 0);"
                           >
@@ -1207,9 +1206,8 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                           </div>
                         </td>
                         <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1wrno0g-MuiTableCell-root"
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-1ham9h7-MuiTableCell-root"
                           data-index="5"
-                          style="text-align: right;"
                         >
                           <p
                             aria-label="2024-02-13T15:42:17.000Z"
@@ -1231,10 +1229,9 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                         >
                           Pod
                         </td>
-                        <th
+                        <td
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1phqppa-MuiTableCell-root"
                           data-index="1"
-                          scope="row"
                         >
                           <a
                             class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-srrjpp-MuiTypography-root-MuiLink-root"
@@ -1242,7 +1239,7 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                           >
                             nginx-deployment-1234567890-abcde
                           </a>
-                        </th>
+                        </td>
                         <td
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-vf4ba6-MuiTableCell-root"
                           data-index="2"
@@ -1260,7 +1257,7 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                         >
                           <span
                             aria-label="FailedGetResourceMetric"
-                            class="MuiTypography-root MuiTypography-body1 makeStyles-statusLabel css-19rs0eg-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 makeStyles-statusLabel css-1tmhfi1-MuiTypography-root"
                             data-mui-internal-clone-element="true"
                             style="background-color: rgb(255, 243, 224); color: rgb(196, 69, 0);"
                           >
@@ -1283,9 +1280,8 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                           </div>
                         </td>
                         <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1wrno0g-MuiTableCell-root"
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-1ham9h7-MuiTableCell-root"
                           data-index="5"
-                          style="text-align: right;"
                         >
                           <p
                             aria-label="2024-02-13T14:42:17.000Z"
@@ -1307,10 +1303,9 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                         >
                           HorizontalPodAutoscaler
                         </td>
-                        <th
+                        <td
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1phqppa-MuiTableCell-root"
                           data-index="1"
-                          scope="row"
                         >
                           <a
                             class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-srrjpp-MuiTypography-root-MuiLink-root"
@@ -1318,7 +1313,7 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                           >
                             nginx-deployment
                           </a>
-                        </th>
+                        </td>
                         <td
                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-vf4ba6-MuiTableCell-root"
                           data-index="2"
@@ -1336,7 +1331,7 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                         >
                           <span
                             aria-label="FailedGetResourceMetric"
-                            class="MuiTypography-root MuiTypography-body1 makeStyles-statusLabel css-19rs0eg-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 makeStyles-statusLabel css-1tmhfi1-MuiTypography-root"
                             data-mui-internal-clone-element="true"
                             style="background-color: rgb(255, 243, 224); color: rgb(196, 69, 0);"
                           >
@@ -1359,9 +1354,8 @@ exports[`Storyshots cluster/Overview Events 1`] = `
                           </div>
                         </td>
                         <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1wrno0g-MuiTableCell-root"
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-1ham9h7-MuiTableCell-root"
                           data-index="5"
-                          style="text-align: right;"
                         >
                           <p
                             aria-label="2023-07-13T14:42:17.000Z"

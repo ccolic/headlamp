@@ -343,19 +343,19 @@ exports[`Storyshots Home/Home Base 1`] = `
                               Name
                             </div>
                             <span
-                              aria-label="Sorted by Name descending"
+                              aria-label="Sorted by Name ascending"
                               class="MuiBadge-root css-1c32n2y-MuiBadge-root"
                               data-mui-internal-clone-element="true"
                             >
                               <span
-                                aria-label="Sorted by Name descending"
+                                aria-label="Sorted by Name ascending"
                                 class="MuiButtonBase-root MuiTableSortLabel-root Mui-active css-1j43wpm-MuiButtonBase-root-MuiTableSortLabel-root"
                                 role="button"
                                 tabindex="0"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionDesc css-3l415a-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
                                   data-testid="ArrowDownwardIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -645,15 +645,17 @@ exports[`Storyshots Home/Home Base 1`] = `
                             class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
                           >
                             <div
-                              class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1sbs8jn"
-                            />
+                              class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-a3udzh"
+                            >
+                               
+                            </div>
                             <span
-                              aria-label="Sort by  ascending"
+                              aria-label="Sort by   ascending"
                               class="MuiBadge-root css-1c32n2y-MuiBadge-root"
                               data-mui-internal-clone-element="true"
                             >
                               <span
-                                aria-label="Sort by  ascending"
+                                aria-label="Sort by   ascending"
                                 class="MuiButtonBase-root MuiTableSortLabel-root Mui-active css-118d58w-MuiButtonBase-root-MuiTableSortLabel-root"
                                 role="button"
                                 tabindex="0"
@@ -722,9 +724,9 @@ exports[`Storyshots Home/Home Base 1`] = `
                       >
                         <a
                           class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-srrjpp-MuiTypography-root-MuiLink-root"
-                          href="/c/cluster2/"
+                          href="/c/cluster0/"
                         >
-                          cluster2
+                          cluster0
                         </a>
                       </td>
                       <td
@@ -864,9 +866,9 @@ exports[`Storyshots Home/Home Base 1`] = `
                       >
                         <a
                           class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-srrjpp-MuiTypography-root-MuiLink-root"
-                          href="/c/cluster0/"
+                          href="/c/cluster2/"
                         >
-                          cluster0
+                          cluster2
                         </a>
                       </td>
                       <td

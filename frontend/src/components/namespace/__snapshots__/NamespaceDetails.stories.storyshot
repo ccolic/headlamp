@@ -404,6 +404,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         colspan="1"
                         data-index="1"
                         scope="col"
+                        style="min-width: 100%;"
                       >
                         <div
                           class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -554,16 +555,16 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </div>
                       </th>
                       <th
-                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-aocwe6-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeMedium css-1u5gah8-MuiTableCell-root"
                         colspan="1"
                         data-index="3"
                         scope="col"
                       >
                         <div
-                          class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                          class="Mui-TableHeadCell-Content MuiBox-root css-15mqaut"
                         >
                           <div
-                            class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                            class="Mui-TableHeadCell-Content-Labels MuiBox-root css-1bh2skb"
                           >
                             <div
                               class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-chb057"
@@ -571,19 +572,19 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                               Age
                             </div>
                             <span
-                              aria-label="Sorted by Age descending"
+                              aria-label="Sorted by Age ascending"
                               class="MuiBadge-root css-1c32n2y-MuiBadge-root"
                               data-mui-internal-clone-element="true"
                             >
                               <span
-                                aria-label="Sorted by Age descending"
+                                aria-label="Sorted by Age ascending"
                                 class="MuiButtonBase-root MuiTableSortLabel-root Mui-active css-1j43wpm-MuiButtonBase-root-MuiTableSortLabel-root"
                                 role="button"
                                 tabindex="0"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionDesc css-3l415a-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
                                   data-testid="ArrowDownwardIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -687,7 +688,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </div>
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-yh37k4-MuiTableCell-root"
                         data-index="3"
                       >
                         <p
@@ -753,7 +754,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </div>
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-yh37k4-MuiTableCell-root"
                         data-index="3"
                       >
                         <p
@@ -819,7 +820,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </div>
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-yh37k4-MuiTableCell-root"
                         data-index="3"
                       >
                         <p
@@ -885,7 +886,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </div>
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-yh37k4-MuiTableCell-root"
                         data-index="3"
                       >
                         <p
@@ -951,7 +952,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </div>
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-yh37k4-MuiTableCell-root"
                         data-index="3"
                       >
                         <p
@@ -1345,16 +1346,16 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </div>
                       </th>
                       <th
-                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-aocwe6-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeMedium css-1u5gah8-MuiTableCell-root"
                         colspan="1"
                         data-index="1"
                         scope="col"
                       >
                         <div
-                          class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                          class="Mui-TableHeadCell-Content MuiBox-root css-15mqaut"
                         >
                           <div
-                            class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                            class="Mui-TableHeadCell-Content-Labels MuiBox-root css-1bh2skb"
                           >
                             <div
                               class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-chb057"
@@ -1362,19 +1363,19 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                               Age
                             </div>
                             <span
-                              aria-label="Sorted by Age descending"
+                              aria-label="Sorted by Age ascending"
                               class="MuiBadge-root css-1c32n2y-MuiBadge-root"
                               data-mui-internal-clone-element="true"
                             >
                               <span
-                                aria-label="Sorted by Age descending"
+                                aria-label="Sorted by Age ascending"
                                 class="MuiButtonBase-root MuiTableSortLabel-root Mui-active css-1j43wpm-MuiButtonBase-root-MuiTableSortLabel-root"
                                 role="button"
                                 tabindex="0"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionDesc css-3l415a-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
                                   data-testid="ArrowDownwardIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -1441,7 +1442,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </a>
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-yh37k4-MuiTableCell-root"
                         data-index="1"
                       >
                         <p
@@ -2220,16 +2221,16 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </div>
                       </th>
                       <th
-                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-aocwe6-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeMedium css-1u5gah8-MuiTableCell-root"
                         colspan="1"
                         data-index="6"
                         scope="col"
                       >
                         <div
-                          class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                          class="Mui-TableHeadCell-Content MuiBox-root css-15mqaut"
                         >
                           <div
-                            class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                            class="Mui-TableHeadCell-Content-Labels MuiBox-root css-1bh2skb"
                           >
                             <div
                               class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-chb057"
@@ -2237,19 +2238,19 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                               Age
                             </div>
                             <span
-                              aria-label="Sorted by Age descending"
+                              aria-label="Sorted by Age ascending"
                               class="MuiBadge-root css-1c32n2y-MuiBadge-root"
                               data-mui-internal-clone-element="true"
                             >
                               <span
-                                aria-label="Sorted by Age descending"
+                                aria-label="Sorted by Age ascending"
                                 class="MuiButtonBase-root MuiTableSortLabel-root Mui-active css-1j43wpm-MuiButtonBase-root-MuiTableSortLabel-root"
                                 role="button"
                                 tabindex="0"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionDesc css-3l415a-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
                                   data-testid="ArrowDownwardIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -2368,7 +2369,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </span>
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-yh37k4-MuiTableCell-root"
                         data-index="6"
                       >
                         <p
@@ -2449,7 +2450,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </span>
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-yh37k4-MuiTableCell-root"
                         data-index="6"
                       >
                         <p
@@ -2530,7 +2531,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </span>
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-yh37k4-MuiTableCell-root"
                         data-index="6"
                       >
                         <p
@@ -2618,7 +2619,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </span>
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-yh37k4-MuiTableCell-root"
                         data-index="6"
                       >
                         <p
@@ -2706,7 +2707,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </span>
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-yh37k4-MuiTableCell-root"
                         data-index="6"
                       >
                         <p
@@ -2787,7 +2788,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </span>
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-yh37k4-MuiTableCell-root"
                         data-index="6"
                       >
                         <p
@@ -2868,7 +2869,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </span>
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-yh37k4-MuiTableCell-root"
                         data-index="6"
                       >
                         <p
@@ -2949,7 +2950,7 @@ exports[`Storyshots Namespace/DetailsView Active 1`] = `
                         </span>
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1h7dc7x-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-yh37k4-MuiTableCell-root"
                         data-index="6"
                       >
                         <p

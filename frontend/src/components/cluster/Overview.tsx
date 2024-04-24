@@ -155,7 +155,8 @@ function EventsSection() {
         },
         {
           label: t('Name'),
-          getter: event => makeObjectLink(event),
+          getter: event => event.involvedObjectInstance?.getName() ?? event.involvedObject.name,
+          render: event => makeObjectLink(event),
           gridTemplate: 1.5,
         },
         'namespace',
