@@ -67,12 +67,6 @@ export default function HpaList() {
             }
             return <RootDiv>{value}</RootDiv>;
           },
-          cellProps: {
-            style: {
-              width: 'fit-content',
-              minWidth: '100%',
-            },
-          },
         },
         {
           id: 'minReplicas',

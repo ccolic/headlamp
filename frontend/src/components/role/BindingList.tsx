@@ -128,10 +128,10 @@ export default function RoleBindingList() {
           id: 'users',
           label: t('translation|Users'),
           getter: item =>
-            item.subjects
-              .filter(s => s.kind === 'User')
-              .map(s => s.name)
-              .join(' '),
+            item?.subjects
+              ?.filter(s => s.kind === 'User')
+              ?.map(s => s.name)
+              ?.join(' '),
           render: item => (
             <LabelListItem
               labels={

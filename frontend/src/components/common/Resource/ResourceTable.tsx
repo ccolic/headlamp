@@ -1,3 +1,4 @@
+import { TableCellProps } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { MRT_Row, MRT_SortingFn } from 'material-react-table';
 import { ComponentProps, ReactNode, useEffect, useMemo, useRef, useState } from 'react';
@@ -20,7 +21,7 @@ export type ResourceTableColumn<RowItem> = {
   /** Label of the column that will be shown in the header */
   label: string;
   gridTemplate?: number | string;
-  cellProps?: {
+  cellProps?: TableCellProps & {
     [propName: string]: any;
   };
   /**
@@ -189,7 +190,7 @@ function ResourceTableContent<RowItem>(props: ResourceTableProps<RowItem>) {
     defaultSortingColumn,
     id,
     noProcessing = false,
-    hideColumns: disabledColumns = [],
+    hideColumns = [],
     filterFunction,
     errorMessage,
     reflectInURL,
@@ -219,7 +220,6 @@ function ResourceTableContent<RowItem>(props: ResourceTableProps<RowItem>) {
           processorInfo.processor({ id: id || '', columns: processedColumns }) || [];
       });
     }
-
     const allColumns = processedColumns
       .map((col, index): TableColumn<KubeObject> => {
         const indexId = String(index);
@@ -236,7 +236,9 @@ function ResourceTableContent<RowItem>(props: ResourceTableProps<RowItem>) {
             enableMultiSort: !!sort,
             enableSorting: !!sort,
             enableColumnFilter: !column.disableFiltering,
+            muiTableHeadCellProps: column.cellProps,
             muiTableBodyCellProps: column.cellProps,
+            grow: false,
           };
 
           if ('getter' in column) {
@@ -268,7 +270,10 @@ function ResourceTableContent<RowItem>(props: ResourceTableProps<RowItem>) {
             return {
               id: 'age',
               header: t('translation|Age'),
-              accessorFn: (item: KubeObject) => item.metadata.creationTimestamp,
+              accessorFn: (item: KubeObject) =>
+                -new Date(item.metadata.creationTimestamp).getTime(),
+              muiTableHeadCellProps: { align: 'right' },
+              muiTableBodyCellProps: { align: 'right' },
               enableColumnFilter: false,
               Cell: ({ row }: { row: MRT_Row<KubeObject> }) =>
                 row.original && (
@@ -307,21 +312,21 @@ function ResourceTableContent<RowItem>(props: ResourceTableProps<RowItem>) {
             throw new Error(`Unknown column: ${col}`);
         }
       })
-      .filter(col => !disabledColumns?.includes(col.id ?? '')) as TableColumn<KubeObject>[];
+      .filter(col => !hideColumns?.includes(col.id ?? '')) as TableColumn<KubeObject>[];
 
     let sort = undefined;
     const sortingColumn = defaultSortingColumn ?? allColumns.find(it => it.id === 'age');
     if (sortingColumn) {
       sort = {
         id: sortingColumn.id!,
-        desc: true,
+        desc: false,
       };
     }
 
     return [allColumns, sort];
   }, [
     columns,
-    disabledColumns,
+    hideColumns,
     id,
     noProcessing,
     defaultSortingColumn,

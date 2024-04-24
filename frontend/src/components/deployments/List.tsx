@@ -80,7 +80,7 @@ export default function DeploymentsList() {
         {
           id: 'conditions',
           label: t('translation|Conditions'),
-          getter: deployment => deployment.status.conditions.map((c: any) => c.type),
+          getter: deployment => deployment.status?.conditions?.map((c: any) => c.type)?.join(''),
           render: deployment => renderConditions(deployment),
         },
         {

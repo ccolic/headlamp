@@ -212,7 +212,7 @@ function HomeComponent(props: HomeComponentProps) {
       >
         <ResourceTable
           filterFunction={filterFunc}
-          defaultSortingColumn={{ id: 'name', desc: true }}
+          defaultSortingColumn={{ id: 'name', desc: false }}
           columns={[
             {
               id: 'name',

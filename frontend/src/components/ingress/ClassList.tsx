@@ -17,7 +17,6 @@ export default function IngressClassList() {
         {
           id: 'default',
           label: '',
-          gridTemplate: 0.1,
           getter: resource => (resource?.isDefault ? t('Default Ingress Class') : null),
           render: (resource: IngressClass) =>
             resource && resource.isDefault ? <DefaultLabel /> : null,

@@ -112,7 +112,6 @@ function EventsSection() {
         status={event.type === 'Normal' ? '' : 'warning'}
         sx={theme => ({
           [theme.breakpoints.up('md')]: {
-            minWidth: '180px',
             display: 'unset',
           },
         })}
@@ -157,10 +156,6 @@ function EventsSection() {
         {
           label: t('Name'),
           getter: event => makeObjectLink(event),
-          cellProps: {
-            scope: 'row',
-            component: 'th',
-          },
           gridTemplate: 1.5,
         },
         'namespace',
@@ -184,14 +179,14 @@ function EventsSection() {
         {
           id: 'last-seen',
           label: t('Last Seen'),
-          getter: event => new Date(event.lastOccurrence).getTime(),
+          getter: event => -new Date(event.lastOccurrence).getTime(),
           render: event => <DateLabel date={event.lastOccurrence} format="mini" />,
-          cellProps: { style: { textAlign: 'right' } },
+          cellProps: { align: 'right' },
           gridTemplate: 'minmax(150px, 0.5fr)',
         },
       ]}
       filterFunction={warningActionFilterFunc}
-      defaultSortingColumn={{ id: 'last-seen', desc: true }}
+      defaultSortingColumn={{ id: 'last-seen', desc: false }}
       id="headlamp-cluster.overview.events"
     />
   );

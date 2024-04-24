@@ -104,6 +104,9 @@ export function Table<RowItem extends Record<string, any>>({
       tableProps.columns.map((column, i) => ({
         ...column,
         id: column.id ?? String(i),
+        // If columns sets empty string as its' header then it's not visible
+        // in the show/hide columns popup
+        header: column.header || ' ',
         size: column.size ?? 80,
       })),
     [tableProps.columns]
