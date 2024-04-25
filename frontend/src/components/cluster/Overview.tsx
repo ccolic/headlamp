@@ -157,7 +157,6 @@ function EventsSection() {
           label: t('Name'),
           getter: event => event.involvedObjectInstance?.getName() ?? event.involvedObject.name,
           render: event => makeObjectLink(event),
-          gridTemplate: 1.5,
         },
         'namespace',
         {
@@ -175,7 +174,6 @@ function EventsSection() {
           render: event => (
             <ShowHideLabel labelId={event.metadata?.uid || ''}>{event.message || ''}</ShowHideLabel>
           ),
-          gridTemplate: 1.5,
         },
         {
           id: 'last-seen',
@@ -183,7 +181,6 @@ function EventsSection() {
           getter: event => -new Date(event.lastOccurrence).getTime(),
           render: event => <DateLabel date={event.lastOccurrence} format="mini" />,
           cellProps: { align: 'right' },
-          gridTemplate: 'minmax(150px, 0.5fr)',
         },
       ]}
       filterFunction={warningActionFilterFunc}

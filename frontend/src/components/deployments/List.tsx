@@ -69,13 +69,11 @@ export default function DeploymentsList() {
           getter: deployment => deployment.status.availableReplicas,
           render: deployment => renderPods(deployment),
           sort: sortByPods,
-          gridTemplate: 0.5,
         },
         {
           id: 'replicas',
           label: t('Replicas'),
           getter: deployment => deployment.spec.replicas || 0,
-          gridTemplate: 0.6,
         },
         {
           id: 'conditions',

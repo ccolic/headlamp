@@ -121,7 +121,6 @@ export function JobsListRenderer(props: JobsListRendererProps) {
             }
             return '-';
           },
-          gridTemplate: 0.6,
         },
         {
           id: 'containers',

@@ -44,7 +44,7 @@ export default class ErrorBoundary extends Component<ErrorBoundaryProps, State> 
   render() {
     const { error } = this.state;
     if (error) {
-      console.error('ErrorBoundary', error);
+      console.error('ErrorBoundary:', error);
       store.dispatch(eventAction({ type: HeadlampEventType.ERROR_BOUNDARY, data: error }));
     }
     if (!error) {

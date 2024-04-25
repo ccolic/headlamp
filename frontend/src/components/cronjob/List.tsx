@@ -48,13 +48,11 @@ export default function CronJobList() {
           id: 'suspend',
           label: t('translation|Suspend'),
           getter: cronJob => cronJob.spec.suspend.toString(),
-          gridTemplate: 0.6,
         },
         {
           id: 'active',
           label: t('translation|Active'),
           getter: cronJob => cronJob.status?.active?.length || 0,
-          gridTemplate: 0.6,
         },
         {
           id: 'lastScheduleTime',

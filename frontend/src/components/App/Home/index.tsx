@@ -240,11 +240,10 @@ function HomeComponent(props: HomeComponentProps) {
             {
               label: '',
               getter: () => '',
-              render: cluster => (
-                <Box textAlign="right">
-                  <ContextMenu cluster={cluster} />
-                </Box>
-              ),
+              cellProps: {
+                align: 'right',
+              },
+              render: cluster => <ContextMenu cluster={cluster} />,
             },
           ]}
           data={Object.values(clusters)}

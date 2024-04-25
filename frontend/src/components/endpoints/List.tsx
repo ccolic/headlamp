@@ -25,7 +25,6 @@ export default function EndpointList() {
           label: t('translation|Addresses'),
           getter: endpoint => endpoint.getAddresses().join(', '),
           render: endpoint => <LabelListItem labels={endpoint.getAddresses()} />,
-          gridTemplate: 1.5,
         },
         'age',
       ]}

@@ -20,7 +20,6 @@ export type ResourceTableColumn<RowItem> = {
   show?: boolean;
   /** Label of the column that will be shown in the header */
   label: string;
-  gridTemplate?: number | string;
   cellProps?: TableCellProps & {
     [propName: string]: any;
   };

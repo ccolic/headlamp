@@ -18,25 +18,21 @@ export default function DaemonSetList() {
           id: 'pods',
           label: t('Pods'),
           getter: daemonSet => daemonSet.status?.currentNumberScheduled || 0,
-          gridTemplate: 0.6,
         },
         {
           id: 'currentPods',
           label: t('translation|Current'),
           getter: daemonSet => daemonSet.status?.currentNumberScheduled || 0,
-          gridTemplate: 0.6,
         },
         {
           id: 'desiredPods',
           label: t('translation|Desired', { context: 'pods' }),
           getter: daemonSet => daemonSet.status?.desiredNumberScheduled || 0,
-          gridTemplate: 0.6,
         },
         {
           id: 'readyPods',
           label: t('translation|Ready'),
           getter: daemonSet => daemonSet.status?.numberReady || 0,
-          gridTemplate: 0.6,
         },
         {
           id: 'nodeSelector',

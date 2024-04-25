@@ -86,7 +86,6 @@ export default function VolumeList() {
           label: t('translation|Status'),
           getter: volume => volume.status?.phase,
           render: volume => makePVStatusLabel(volume),
-          gridTemplate: 0.3,
         },
         'age',
       ]}
