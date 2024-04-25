@@ -633,16 +633,16 @@ exports[`Storyshots Home/Home Base 1`] = `
                         </div>
                       </th>
                       <th
-                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-5c6oq9-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeMedium css-1b2qa2g-MuiTableCell-root"
                         colspan="1"
                         data-index="4"
                         scope="col"
                       >
                         <div
-                          class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                          class="Mui-TableHeadCell-Content MuiBox-root css-15mqaut"
                         >
                           <div
-                            class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                            class="Mui-TableHeadCell-Content-Labels MuiBox-root css-1bh2skb"
                           >
                             <div
                               class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-a3udzh"
@@ -762,27 +762,23 @@ exports[`Storyshots Home/Home Base 1`] = `
                         ⋯
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-gjsi9o-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-c9e1mn-MuiTableCell-root"
                         data-index="4"
                       >
-                        <div
-                          class="MuiBox-root css-s2uf1z"
+                        <button
+                          aria-controls="context-menuid"
+                          aria-haspopup="menu"
+                          aria-label="Actions"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                          tabindex="0"
+                          type="button"
                         >
-                          <button
-                            aria-controls="context-menuid"
-                            aria-haspopup="menu"
-                            aria-label="Actions"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <span />
-                            <span
-                              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                            />
-                          </button>
-                          <div />
-                        </div>
+                          <span />
+                          <span
+                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                          />
+                        </button>
+                        <div />
                       </td>
                     </tr>
                     <tr
@@ -833,27 +829,23 @@ exports[`Storyshots Home/Home Base 1`] = `
                         ⋯
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-gjsi9o-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-c9e1mn-MuiTableCell-root"
                         data-index="4"
                       >
-                        <div
-                          class="MuiBox-root css-s2uf1z"
+                        <button
+                          aria-controls="context-menuid"
+                          aria-haspopup="menu"
+                          aria-label="Actions"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                          tabindex="0"
+                          type="button"
                         >
-                          <button
-                            aria-controls="context-menuid"
-                            aria-haspopup="menu"
-                            aria-label="Actions"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <span />
-                            <span
-                              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                            />
-                          </button>
-                          <div />
-                        </div>
+                          <span />
+                          <span
+                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                          />
+                        </button>
+                        <div />
                       </td>
                     </tr>
                     <tr
@@ -904,27 +896,23 @@ exports[`Storyshots Home/Home Base 1`] = `
                         ⋯
                       </td>
                       <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-gjsi9o-MuiTableCell-root"
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-c9e1mn-MuiTableCell-root"
                         data-index="4"
                       >
-                        <div
-                          class="MuiBox-root css-s2uf1z"
+                        <button
+                          aria-controls="context-menuid"
+                          aria-haspopup="menu"
+                          aria-label="Actions"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                          tabindex="0"
+                          type="button"
                         >
-                          <button
-                            aria-controls="context-menuid"
-                            aria-haspopup="menu"
-                            aria-label="Actions"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <span />
-                            <span
-                              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                            />
-                          </button>
-                          <div />
-                        </div>
+                          <span />
+                          <span
+                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                          />
+                        </button>
+                        <div />
                       </td>
                     </tr>
                   </tbody>
